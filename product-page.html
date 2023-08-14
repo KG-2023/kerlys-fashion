@@ -598,28 +598,7 @@
       </div>
     </div>
   </section>
-  <!-- end of Footer Bottom Section -->
-
-  <div id="cart">
-    <h2>Cart</h2>
-    <ul id="cartItems"></ul>
-  </div>
-
-  <script>
-    function addToCart() {
-      var productTitle = document.getElementById('productTitle').innerHTML = '';
-      var productVariant = "Variant A";
-      var productPrice = 100.00;
-      var quantity = parseInt(document.getElementById("quantity").value);
-
-      var cartItems = document.getElementById("cartItems");
-
-      var cartItem = document.createElement("li");
-      cartItem.innerText = `Title: ${productTitle}, Variant: ${productVariant}, Quantity: ${quantity}, Price: $${(productPrice * quantity).toFixed(2)}`;
-
-      cartItems.appendChild(cartItem);
-    }
-  </script>
+  <!-- end of Footer Bottom Section -->  
 </body>
 
 </html>
