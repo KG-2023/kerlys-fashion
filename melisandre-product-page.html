@@ -271,9 +271,11 @@
               <span class="fa fa-star checked"></span>
               <span>300 Trusted Reviews</span>
             </small>
-            <h5 class="h1" id="productTitle">This is a product page</h5>
-            <div class="h5"><del>$200 USD</del> &nbsp;$100 USD &nbsp;<span class="badge badge-save50 bg-danger">Save
-                50%</span></div>
+            <h5 class="h1" id="productTitle">Melisandre</h5>
+            <div class="h5" id="productPrice">$600 USD <del class="mx-2">$700</del>
+              <span class="badge badge-save50 bg-danger">Save
+                $100</span>
+            </div>
 
             <div class="free-shipping-product-form my-3">
               <img src="images/icons/free-shipping-icon.png"> <small>Free Express Shipping<br>
@@ -288,12 +290,12 @@
               <label for="quantity" class="mb-1">Quantity</label>
             </div>
             <div>
-              <input class="form-control text-center" style="width:150px;" type="number" name="quantity" id="quantity"
-                min="1" value="1" />
+              <input class="form-control text-center" style="width:150px;" type="number" name="quantity"
+                id="productQuantity" min="1" value="1" />
             </div>
 
             <div class="add-to-cart-button my-4">
-              <button class="btn btn-primary" style="width:150px;">Add to Cart</button>
+              <button id="addToCartButton" class="btn btn-primary" style="width:150px;">Add to Cart</button>
             </div>
 
             <div class="productpage-secure-checkout-cc-icons">
@@ -311,6 +313,54 @@
     </div>
   </section>
   <!-- end of Product Page Image Gallery and Form section -->
+
+  <script>
+    // Store product information in session storage
+    const productInfo = {
+      title: "Melisandre",
+      price: 600,
+      image: "images/product-page/shoes/shoes-pp-1.webp"
+    };
+
+    sessionStorage.setItem("productInfo", JSON.stringify(productInfo));
+  </script>
+
+  <script>
+    // Function to add product to cart and redirect to cart page
+    function addToCart() {
+      const quantity = parseInt(document.getElementById("productQuantity").value);
+      const productInfo = JSON.parse(sessionStorage.getItem("productInfo"));
+
+      // Create a cart object
+      const cartItem = {
+        title: productInfo.title,
+        price: productInfo.price,
+        image: productInfo.image,
+        quantity: quantity
+      };
+
+      // Get existing cart items from session storage
+      const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+
+      // Check if the item is already in the cart
+      const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
+      if (existingItemIndex !== -1) {
+        cartItems[existingItemIndex].quantity += quantity;
+      } else {
+        cartItems.push(cartItem);
+      }
+
+      // Update cart items in session storage
+      sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Redirect to cart page
+      window.location.href = "cart-page.html"; // Replace with your actual cart page URL
+    }
+
+    // Attach click event to "Add to Cart" button
+    const addToCartButton = document.getElementById("addToCartButton");
+    addToCartButton.addEventListener("click", addToCart);
+  </script>
 
   <!-- Product Description tabs -->
   <section class="product-description-tabs-desktop my-5">
