@@ -44,6 +44,10 @@
     padding: 5px;
   }
 
+  .subTotalCart {
+    font-weight: bold;
+  }
+
   @media only screen and (max-width: 428px) {
     table {
       border-collapse: collapse;
@@ -55,9 +59,7 @@
 
     .subTotalCart {
       position: absolute;
-      transform: translate(-50%, -50%);
-      left: 50%;
-      top: 58%;
+      right: 8px;
     }
   }
 </style>
@@ -139,6 +141,16 @@
           </tr>
         </thead>
         <tbody id="cartItemsTableBody"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4"></td>
+            <td>
+              <div class="subTotalCart" id="cartSubtotal">
+                <!-- Subtotal will be dynamically added here -->
+              </div>
+            </td>
+          </tr>
+        </tfoot>
       </table>
     </div>
 
@@ -183,9 +195,14 @@
           existingSubtotal.remove();
         }
 
+        // Add new subtotal to the tfoot element
+        const tfootElement = document.querySelector("tfoot");
+        const tfootRow = tfootElement.querySelector("tr");
+        const tdElement = tfootRow.querySelector("td:last-child");
+        tdElement.appendChild(subtotalElement);
 
         // Add new totals to the DOM
-        cartItemsTableBody.parentElement.appendChild(subtotalElement);
+        // cartItemsTableBody.parentElement.appendChild(subtotalElement);
 
         // Update cart icon in navigation menu with cart item count
         updateCartIconInMenu(cartItems.length);
