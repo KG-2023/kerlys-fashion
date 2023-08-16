@@ -26,7 +26,7 @@
   }
 
   /* Hide the images by default */
-  .shoes-pp-Slides {
+  .aeliana-pp-Slides {
     display: none;
   }
 
@@ -83,12 +83,12 @@
   }
 
   /* Add a transparency effect for thumbnail images */
-  .shoes-pp {
+  .aeliana-pp {
     opacity: 0.6;
   }
 
   .active,
-  .shoes-pp:hover {
+  .aeliana-pp:hover {
     opacity: 1;
   }
 
@@ -110,11 +110,11 @@
     --bs-nav-tabs-border-color: #329BD1;
   }
 
-  .shoes-product-page .card {
+  .aeliana-product-page .card {
     border: none;
   }
 
-  .shoes-product-page .g-4 {
+  .aeliana-product-page .g-4 {
     --bs-gutter-x: 5rem;
   }
 </style>
@@ -181,25 +181,29 @@
   </section>
   <!-- end of logo and main navigation section -->
 
-  <section class="shoes-product-page container-sm">
+  <section class="aeliana-product-page container-sm">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
       <div class="col">
         <div class="card my-5">
           <div class="container">
-            <div class="shoes-pp-Slides">
-              <img src="images/shoes-collection/melisandre/2.png" style="width:100%">
+            <div class="aeliana-pp-Slides">
+              <img src="images/lv-bags-collection/aeliana/1.webp" style="width:100%">
             </div>
 
-            <div class="shoes-pp-Slides">
-              <img src="images/shoes-collection/melisandre/1.png" style="width:100%">
+            <div class="aeliana-pp-Slides">
+              <img src="images/lv-bags-collection/aeliana/2.webp" style="width:100%">
             </div>
 
-            <div class="shoes-pp-Slides">
-              <img src="images/shoes-collection/melisandre/3.png" style="width:100%">
+            <div class="aeliana-pp-Slides">
+              <img src="images/lv-bags-collection/aeliana/3.webp" style="width:100%">
             </div>
 
-            <div class="shoes-pp-Slides">
-              <img src="images/shoes-collection/melisandre/melisandre-4.png" style="width:100%">
+            <div class="aeliana-pp-Slides">
+              <img src="images/lv-bags-collection/aeliana/4.webp" style="width:100%">
+            </div>
+
+            <div class="aeliana-pp-Slides">
+              <img src="images/lv-bags-collection/aeliana/5.webp" style="width:100%">
             </div>
 
 
@@ -209,19 +213,23 @@
             <p>&nbsp;</p>
             <div class="row">
               <div class="column">
-                <img class="shoes-pp cursor" src="images/shoes-collection/melisandre/2.png" style="width:100%"
+                <img class="aeliana-pp cursor" src="images/lv-bags-collection/aeliana/1.webp" style="width:100%"
                   onclick="currentSlide(1)" alt="">
               </div>
               <div class="column">
-                <img class="shoes-pp cursor" src="images/shoes-collection/melisandre/1.png" style="width:100%"
+                <img class="aeliana-pp cursor" src="images/lv-bags-collection/aeliana/2.webp" style="width:100%"
                   onclick="currentSlide(2)" alt="">
               </div>
               <div class="column">
-                <img class="shoes-pp cursor" src="images/shoes-collection/melisandre/3.png" style="width:100%"
+                <img class="aeliana-pp cursor" src="images/lv-bags-collection/aeliana/3.webp" style="width:100%"
                   onclick="currentSlide(3)" alt="">
               </div>
               <div class="column">
-                <img class="shoes-pp cursor" src="images/shoes-collection/melisandre/melisandre-4.png" style="width:100%"
+                <img class="aeliana-pp cursor" src="images/lv-bags-collection/aeliana/4.webp" style="width:100%"
+                  onclick="currentSlide(4)" alt="">
+              </div>
+              <div class="column">
+                <img class="aeliana-pp cursor" src="images/lv-bags-collection/aeliana/5.webp" style="width:100%"
                   onclick="currentSlide(4)" alt="">
               </div>
             </div>
@@ -241,8 +249,8 @@
 
             function showSlides(n) {
               let i;
-              let slides = document.getElementsByClassName("shoes-pp-Slides");
-              let dots = document.getElementsByClassName("shoes-pp");
+              let slides = document.getElementsByClassName("aeliana-pp-Slides");
+              let dots = document.getElementsByClassName("aeliana-pp");
               let captionText = document.getElementById("caption");
               if (n > slides.length) { slideIndex = 1 }
               if (n < 1) { slideIndex = slides.length }
@@ -271,7 +279,7 @@
               <span class="fa fa-star checked"></span>
               <span>300 Trusted Reviews</span>
             </small>
-            <h5 class="h1" id="productTitle">Melisandre</h5>
+            <h5 class="h1" id="productTitle">Aeliana</h5>
             <div class="h5" id="productPrice">$600 USD <del class="mx-2">$700</del>
               <span class="badge badge-save50 bg-danger">Save
                 $100</span>
@@ -317,9 +325,9 @@
   <script>
     // Store product information in session storage
     const productInfo = {
-      title: "Melisandre",
+      title: "Aeliana",
       price: 600,
-      image: "images/shoes-collection/melisandre/melisandre-2.webp"
+      image: "images/lv-bags-collection/aeliana/1.webp"
     };
 
     sessionStorage.setItem("productInfo", JSON.stringify(productInfo));

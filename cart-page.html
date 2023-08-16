@@ -129,9 +129,9 @@
         row.innerHTML = `
       <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
       <td>${item.title}</td>
-      <td>$${item.price.toFixed(2)}</td>
+      <td>$${item.price.toFixed()}</td>
       <td>${item.quantity}</td>
-      <td>$${(item.price * item.quantity).toFixed(2)}</td>
+      <td>$${(item.price * item.quantity).toFixed()}</td>
     `;
         cartItemsTableBody.appendChild(row);
       });
