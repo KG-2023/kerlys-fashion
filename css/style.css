@@ -389,37 +389,7 @@ section.lv-bags-collection div.card {
 }
 
 /* -------------------------------------------- CART PAGE SECTION ---------------------------------------- */
-h6.cart-page-continueshopping {
-    position: relative;
-    top: 5px;
-}
 
-h6.cart-page-continueshopping a {
-    text-decoration: none;
-    color:#329BD1;
-}
-
-a.continue-checkout-button {
-    background-color: #329BD1;
-    padding: 10px 30px;
-    text-decoration: none;
-    color: white;
-}
-
-i#cart-page-cc-icon {
-    color:#329BD1;
-    font-size: 25px;
-}
-
-.cart-page-subtotal {
-    position: relative;
-    right: 6px;
-}
-
-.cart-page-products-title {
-    position: relative;
-    left: 2rem;
-}
 /* end of Cart Page */
 
 /* -------------------------------------- LARGE SCREEN RESPONSIVENESS -------------------------------- */
