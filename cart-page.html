@@ -155,6 +155,39 @@
       // Update cart icon in navigation menu with cart item count
       updateCartIconInMenu(cartItems.length);
     </script>
+
+    <script>
+      // Function to calculate and display subtotal
+      function updateCartTotals() {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const subtotalElement = document.createElement("div");
+        subtotalElement.className = "subTotalCart";
+
+        let subtotal = 0;
+        cartItems.forEach(item => {
+          subtotal += item.price * item.quantity;
+        });
+
+        subtotalElement.innerHTML = `Subtotal: $${subtotal.toFixed()}`;
+
+        // Clear previous totals
+        const existingSubtotal = document.getElementById("cartSubtotal");
+        if (existingSubtotal) {
+          existingSubtotal.remove();
+        }
+        
+
+        // Add new totals to the DOM
+        cartItemsTableBody.parentElement.appendChild(subtotalElement);
+
+        // Update cart icon in navigation menu with cart item count
+        updateCartIconInMenu(cartItems.length);
+      }
+
+      // Call the function to update cart totals
+      updateCartTotals();
+    </script>
+
   </section>
 
   <!-- Site Footer section -->
