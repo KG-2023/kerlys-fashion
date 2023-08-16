@@ -44,6 +44,13 @@
     padding: 5px;
   }
 
+  th.total-heading,
+  td.subtotal-cart-page,
+  td.checkout-button-cart,
+  td.item-price-cart {
+    text-align: right;
+  }
+
   .subTotalCart {
     font-weight: bold;
   }
@@ -55,6 +62,12 @@
 
     td img {
       width: 100px !important;
+    }
+
+    th.total-heading,
+    td.subtotal-cart-page,
+    td.item-price-cart {
+      text-align: center;
     }
 
     .subTotalCart {
@@ -137,22 +150,32 @@
             <th colspan="2">Product</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Total</th>
+            <th class="total-heading">Total</th>
           </tr>
         </thead>
         <tbody id="cartItemsTableBody"></tbody>
         <tfoot>
           <tr>
             <td colspan="4"></td>
-            <td>
+            <td class="subtotal-cart-page pb-5">
               <div class="subTotalCart" id="cartSubtotal">
                 <!-- Subtotal will be dynamically added here -->
               </div>
             </td>
           </tr>
+          <tr>
+            <td colspan="4"></td>
+            <td class="checkout-button-cart">
+              <button type="button" class="btn btn-primary">CHECKOUT</button>
+            </td>
+          </tr>
         </tfoot>
       </table>
     </div>
+
+    <!-- <div class="checkout-button-cartpage container">
+      <button type="button" class="btn btn-primary">CHECKOUT</button>
+    </div> -->
 
     <script>
       // Retrieve cart items from session storage and display them in the table
@@ -166,7 +189,7 @@
       <td>${item.title}</td>
       <td>$${item.price.toFixed()}</td>
       <td>${item.quantity}</td>
-      <td>$${(item.price * item.quantity).toFixed()}</td>
+      <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
     `;
         cartItemsTableBody.appendChild(row);
       });
