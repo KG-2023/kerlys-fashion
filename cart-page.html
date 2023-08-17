@@ -8,6 +8,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
 
@@ -41,7 +42,7 @@
 
   th,
   td {
-    width: 150px;
+    width: 140px;
     text-align: center;
     padding: 5px;
   }
@@ -55,6 +56,12 @@
 
   .subTotalCart {
     font-weight: bold;
+  }
+
+  #delete-button-cart {
+    background: none;
+    border: none;
+    color: #329BD1;
   }
 
   @media only screen and (max-width: 428px) {
@@ -82,7 +89,11 @@
 
   @media only screen and (max-width: 320px) {
     td img {
-      width: 3rem !important;
+      width: 2rem !important;
+    }
+
+    td {
+      padding: 2px;
     }
   }
 </style>
@@ -236,9 +247,6 @@
         // Update cart icon in navigation menu with cart item count
         updateCartIconInMenu(cartItems.length);
       }
-
-      // Call the function to update cart totals
-      updateCartTotals();
     </script>
 
     <!-- When cart is empty -->
@@ -256,6 +264,98 @@
         }
       });
     </script>
+
+    <script>
+      // Function to handle item deletion
+      function deleteCartItem(index) {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+
+        // Remove the item at the specified index
+        cartItems.splice(index, 1);
+
+        // Update session storage
+        sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        // Refresh the cart page
+        location.reload();
+      }
+    </script>
+
+    <script>
+      // Update the cart items table
+      function updateCartItemsTable() {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItemsTableBody = document.getElementById("cartItemsTableBody");
+
+        cartItemsTableBody.innerHTML = ""; // Clear the existing table content
+
+        cartItems.forEach((item, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+        <td>${item.title}</td>
+        <td>$${item.price.toFixed()}</td>
+        <td>${item.quantity}</td>
+        <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
+        
+        <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fas fa-trash"></i></button></td>
+
+      `;
+          cartItemsTableBody.appendChild(row);
+        });
+
+        // Update cart totals and icon in navigation menu
+        updateCartTotals();
+      }
+
+      // Call the function to update cart items table
+      updateCartItemsTable();
+    </script>
+
+    <!-- <script>
+      // Function to handle item deletion
+      function deleteCartItem(index) {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+
+        // Remove the item at the specified index
+        cartItems.splice(index, 1);
+
+        // Update session storage
+        sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+        // Update the cart items table and totals
+        updateCartItemsTable();
+        updateCartTotals();
+      }
+
+      // Update the cart items table
+      function updateCartItemsTable() {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItemsTableBody = document.getElementById("cartItemsTableBody");
+
+        cartItemsTableBody.innerHTML = ""; // Clear the existing table content
+
+        cartItems.forEach((item, index) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+        <td>${item.title}</td>
+        <td>$${item.price.toFixed()}</td>
+        <td>${item.quantity}</td>
+        <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
+        <td><button class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fas fa-trash"></i></button></td>
+      `;
+          cartItemsTableBody.appendChild(row);
+        });
+
+        // Update cart icon in navigation menu
+        updateCartIconInMenu(cartItems.length);
+      }
+
+      // Call the function to update cart items table
+      updateCartItemsTable();
+    </script>
+    </script> -->
 
   </section>
 
