@@ -12,6 +12,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <script>
+    // JavaScript function to update the cart icon in the navigation menu
+    function updateCartIconInMenu(cartItemCount) {
+      const cartIcon = document.getElementById("navbar-cart-icon");
+      const cartLink = cartIcon.querySelector("a");
+      const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
+
+      if (cartItemCount > 0) {
+        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
+        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
+      } else {
+        cartLink.innerHTML = cartIconHtml;
+      }
+    }
+  </script>
+
 </head>
 
 <body>
@@ -74,6 +90,13 @@
       </div>
     </nav>
   </section>
+
+  <script>
+    // Retrieve cart items from session storage and update cart icon
+    const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+    updateCartIconInMenu(cartItems.length);
+  </script>
+
   <!-- end of logo and main navigation section -->
 
   <!-- Homepage Video Banner Bag section -->
