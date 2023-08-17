@@ -310,6 +310,11 @@ section.lv-bags-collection div.card {
   color: #fff;
 }
 
+.lv-bags-collection a {
+  text-decoration: none;
+  color: black;
+}
+
 /* ------------------------------------------ CHANEL BAGS COLLECTION ------------------------------------- */
 .chanel-bags-collection-image-banner .container-liquid {
   position: relative;
