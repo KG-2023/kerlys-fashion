@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
 
   <script>
     // JavaScript function to update the cart icon in the navigation menu
@@ -24,7 +25,8 @@
         cartLink.innerHTML = cartIconHtml;
       }
     }
-  </script>  
+  </script>
+
 </head>
 
 <style>
@@ -150,40 +152,39 @@
   <!-- Cart Page HTML (cart-page.html) -->
 
   <section class="cart-page-item-desc my-5">
-    <h2 class="h1 text-center mb-5">Review Your Cart</h2>
-    <div class="item-desc-container justify-content-around d-flex">
-      <table>
-        <thead>
-          <tr>
-            <th colspan="2">Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th class="total-heading">Total</th>
-          </tr>
-        </thead>
-        <tbody id="cartItemsTableBody"></tbody>
-        <tfoot>
-          <tr>
-            <td colspan="4"></td>
-            <td class="subtotal-cart-page py-5">
-              <div class="subTotalCart" id="cartSubtotal">
-                <!-- Subtotal will be dynamically added here -->
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="4"></td>
-            <td class="checkout-button-cart">
-              <button type="button" class="btn btn-primary">CHECKOUT</button>
-            </td>
-          </tr>
-        </tfoot>
-      </table>
+    <div id="empty-cart-message" class="text-center h3" style="display: none;">Your cart is empty.</div>
+    <div id="cart-items-container">
+      <h2 class="h1 text-center mb-5">Review Your Cart</h2>
+      <div class="item-desc-container justify-content-around d-flex">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th class="total-heading">Total</th>
+            </tr>
+          </thead>
+          <tbody id="cartItemsTableBody"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4"></td>
+              <td class="subtotal-cart-page py-5">
+                <div class="subTotalCart" id="cartSubtotal">
+                  <!-- Subtotal will be dynamically added here -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td class="checkout-button-cart">
+                <button type="button" class="btn btn-primary">CHECKOUT</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
-
-    <!-- <div class="checkout-button-cartpage container">
-      <button type="button" class="btn btn-primary">CHECKOUT</button>
-    </div> -->
 
     <script>
       // Retrieve cart items from session storage and display them in the table
@@ -232,15 +233,28 @@
         const tdElement = tfootRow.querySelector("td:last-child");
         tdElement.appendChild(subtotalElement);
 
-        // Add new totals to the DOM
-        // cartItemsTableBody.parentElement.appendChild(subtotalElement);
-
         // Update cart icon in navigation menu with cart item count
         updateCartIconInMenu(cartItems.length);
       }
 
       // Call the function to update cart totals
       updateCartTotals();
+    </script>
+
+    <!-- When cart is empty -->
+    <script>
+      $(document).ready(function () {
+        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+
+        // Check if the cart is empty
+        if (cartItems.length === 0) {
+          $('#cart-items-container').hide(); // Hide the table
+          $('#empty-cart-message').show(); // Show the empty cart message
+        } else {
+          $('#cart-items-container').show(); // Show the table
+          $('#empty-cart-message').hide(); // Hide the empty cart message
+        }
+      });
     </script>
 
   </section>
