@@ -221,6 +221,11 @@ button.newsletter.btn.btn-info {
   color: white;
 }
 
+body > section.newsletter.mt-5 > p:nth-child(4) {
+  text-align: center;
+  margin-top: 2rem;
+}
+
 /* end of Newsletter Section */
 
 /* --------------------------------------------- FOOTER SECTION ------------------------------------------ */

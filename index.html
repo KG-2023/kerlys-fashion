@@ -320,8 +320,8 @@
     <h2 class="text-center">Let's Stay Connected</h2>
     <p class="text-center">Don't Miss Our Promotion. Sign up to get your 20% discount off your purchase.</p>
 
-    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center" action="https://google.com"
-      target="_blank" method="get">
+    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center" action="" target="_blank"
+      method="get">
       <div class="row container g-3">
         <div class="col-sm-4">
           <input type="text" class="form-control" placeholder="Enter full name" aria-label="City">
@@ -335,6 +335,54 @@
       </div>
     </form>
   </section>
+
+  <script>
+    // Function to handle form submission and localStorage storage
+    function handleSubscribe(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const fullNameInput = document.querySelector('input[placeholder="Enter full name"]');
+      const emailInput = document.querySelector('input[placeholder="Enter email address"]');
+      const successMessage = document.createElement('p');
+      const existingSubscriber = localStorage.getItem('subscriber');
+      const existingSubscriberInfo = JSON.parse(existingSubscriber);
+
+      if (existingSubscriberInfo && existingSubscriberInfo.email === emailInput.value) {
+        // Email is already subscribed
+        successMessage.textContent = 'This email is already subscribed.';
+        successMessage.style.color = 'red';
+      } else if (fullNameInput.value && emailInput.value) {
+        // Store subscriber information in localStorage
+        const subscriberInfo = {
+          fullName: fullNameInput.value,
+          email: emailInput.value,
+        };
+
+        localStorage.setItem('subscriber', JSON.stringify(subscriberInfo));
+
+        // Display success message
+        successMessage.textContent = 'Thank you for subscribing';
+        successMessage.style.color = 'green';
+      } else {
+        // Display error message if inputs are empty
+        successMessage.textContent = 'Please fill out both fields';
+        successMessage.style.color = 'red';
+      }
+
+      // Clear input fields
+      fullNameInput.value = '';
+      emailInput.value = '';
+
+      // Append the message after the form
+      const newsletterSection = document.querySelector('.newsletter');
+      newsletterSection.appendChild(successMessage);
+    }
+
+    // Add event listener to the form submit button
+    const subscribeButton = document.querySelector('.newsletter-subscribe');
+    subscribeButton.addEventListener('click', handleSubscribe);
+
+  </script>
   <!-- end of Newsletter section -->
 
   <!-- Site Footer section -->
@@ -373,9 +421,12 @@
             <div class="card-body">
               <h5 class="card-title">Follow Us On Social Media</h5>
               <ul class="list-unstyled follow-us d-flex">
-                <li class="me-2"><a href="https://facebook.com" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
-                <li class="me-2"><a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
-                <li class="me-2"><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                <li class="me-2"><a href="https://facebook.com" target="_blank"><i
+                      class="fa fa-facebook-square"></i></a></li>
+                <li class="me-2"><a href="https://pinterest.com" target="_blank"><i
+                      class="fa fa-pinterest-square"></i></a></li>
+                <li class="me-2"><a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                </li>
                 <li><a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
               </ul>
             </div>
