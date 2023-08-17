@@ -1,49 +1,50 @@
 /* ----------------------------------------- ANNOUNCEMENT BANNER section ------------------------------- */
 div#announcement-banner {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 4px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 4px;
 }
 
 /* ------------------------------------------- HEADER section -------------------------------------------- */
 
 ul.navbar-nav li a {
-    color: black;
-    letter-spacing: 2px;    
+  color: black;
+  letter-spacing: 2px;
 }
 
 ul.navbar-nav li:hover {
-    background-color: #329BD1;
+  background-color: #329BD1;
 }
 
 button#navbar-search {
-    background-color: #329BD1;
-    color: white;
-    border-color: #329BD1;
+  background-color: #329BD1;
+  color: white;
+  border-color: #329BD1;
 }
 
 button#navbar-search:hover {
-    background-color: #329BD1;
+  background-color: #329BD1;
 }
 
 li.nav-item a.nav-link:hover {
-    color: white;
+  color: white;
 }
 
 #navbar-cart-icon a {
-    color: #329BD1;
-    position: relative;
-    top: 9px;
+  color: #329BD1;
+  position: relative;
+  top: 9px;
 }
+
 /* end of header section */
 
 /* ------------------------------------ HOME PAGE VIDEO BANNER BAG SECTION ------------------------------ */
 
 a.btn.btn-primary {
-    background-color: #329BD1;
-    border-color: #329BD1;
+  background-color: #329BD1;
+  border-color: #329BD1;
 }
 
 a.btn.btn-primary:hover {
@@ -53,312 +54,321 @@ a.btn.btn-primary:hover {
 }
 
 .homepage-video-banner-bag .container-liquid {
-    position: relative;
+  position: relative;
 }
 
 .homepage-video-banner-bag-textbox {
-    position: absolute;
-    top: 35%;
-    left: 3%;
+  position: absolute;
+  top: 35%;
+  left: 3%;
 }
 
 .homepage-video-banner-bag-textbox .unleash-style {
-    color: #329BD1;
+  color: #329BD1;
 }
 
 .homepage-video-banner-bag-textbox span.confidence {
-    color: white;
+  color: white;
 }
 
 .homepage-video-banner-bag-textbox h3 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
-  /* ----------------------------------------- SHOP BY BRANDS ---------------------------------------------*/
-  
-  .shop-by-brands .card {
-    border: none;
-  }
+/* ----------------------------------------- SHOP BY BRANDS ---------------------------------------------*/
 
-  img#shop-by-brands-image {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.shop-by-brands .card {
+  border: none;
+}
 
-  span.fa.fa-star {
-    color: orange;
-  }
-  
-  /* ------------------------------------- ELEVATE YOUR FASHION IMAGE BANNER ---------------------------------*/
-  .elevate-fashion-image-banner img {
-    max-width: 100%;
-  }
-  
-  .elevate-fashion-image-banner-container {
-    position: relative;
-  }
+img#shop-by-brands-image {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .elevate-fashion-text-overlay-box {
-    position: absolute;
-    top: 35%;
-    left: 3%;
-  }
+span.fa.fa-star {
+  color: orange;
+}
 
-  .elevate-fashion-text-overlay-box h3 {
-    font-size: 4rem;
-  }
+/* ------------------------------------- ELEVATE YOUR FASHION IMAGE BANNER ---------------------------------*/
+.elevate-fashion-image-banner img {
+  max-width: 100%;
+}
 
-  .elevate-fashion-text-overlay-box span.elevate-fashion {
-    color: #329BD1;
-  }
+.elevate-fashion-image-banner-container {
+  position: relative;
+}
 
-  .elevate-fashion-text-overlay-box span.embrace-luxury {
-    color: white;
-  }
+.elevate-fashion-text-overlay-box {
+  position: absolute;
+  top: 35%;
+  left: 3%;
+}
 
-  /* ------------------------- WOMEN'S BAGS AND JEWELLERY IMAGE TEXT OVERLAY SECTION ---------------------*/
-  .womens-bags-jewellery-img-text-overlay img {
-    max-width: 100%;
-  }
+.elevate-fashion-text-overlay-box h3 {
+  font-size: 4rem;
+}
 
-  div.womens-bags-text-overlay {
-    position: relative; 
-    display: inline-block;          
-  }
+.elevate-fashion-text-overlay-box span.elevate-fashion {
+  color: #329BD1;
+}
 
-  div.womens-bags-text-overlay h2 {
-    position: absolute; 
-    top: 80%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgba(50, 155, 209, 0.7); 
-    color: #fff; 
-    padding: 10px; 
-    border-radius: 5px; 
-  }
+.elevate-fashion-text-overlay-box span.embrace-luxury {
+  color: white;
+}
 
-  div.womens-jewellery-text-overlay {
-    position: relative; 
-    display: inline-block;
-  }
+/* ------------------------- WOMEN'S BAGS AND JEWELLERY IMAGE TEXT OVERLAY SECTION ---------------------*/
+.womens-bags-jewellery-img-text-overlay img {
+  max-width: 100%;
+}
 
-  div.womens-jewellery-text-overlay h2 {
-    position: absolute; 
-    top: 80%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: rgba(50, 155, 209, 0.7); 
-    color: #fff; 
-    padding: 10px; 
-    border-radius: 5px;
-  }
+div.womens-bags-text-overlay {
+  position: relative;
+  display: inline-block;
+}
 
-  .women-bags-jewellery-img-text-overlay-wrapper a {
-    text-decoration: none;
-  }
+div.womens-bags-text-overlay h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(50, 155, 209, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
 
- /* ------------------------------------- SHOES HOMEPAGE VIDEO BANNER SECTION --------------------------- */
- .shoes-homepage-banner-video .container-liquid {
-    position: relative;
- }
+div.womens-jewellery-text-overlay {
+  position: relative;
+  display: inline-block;
+}
 
- .shoes-homepage-banner-video-textbox {
-    position: absolute;
-    top: 50%;
-    right: 3%;
- }
+div.womens-jewellery-text-overlay h2 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(50, 155, 209, 0.7);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
 
- .shoes-homepage-banner-video-textbox .elegance {
-    color: #329BD1;
- }
+.women-bags-jewellery-img-text-overlay-wrapper a {
+  text-decoration: none;
+}
 
- .shoes-homepage-banner-video-textbox .comfort {
-    color: white;
- }
+/* ------------------------------------- SHOES HOMEPAGE VIDEO BANNER SECTION --------------------------- */
+.shoes-homepage-banner-video .container-liquid {
+  position: relative;
+}
 
- .shoes-homepage-banner-video-textbox h3 {
-    font-size: 4rem;
- }
+.shoes-homepage-banner-video-textbox {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+}
 
- /* --------------------------------------- JEWELRY VIDEO BANNER SECTION --------------------------------- */
- .jewelry-video-banner-homepage .container-liquid {
-    position: relative;
- }
+.shoes-homepage-banner-video-textbox .elegance {
+  color: #329BD1;
+}
 
- .jewelry-video-banner-homepage-textbox {
-    position: absolute;
-    top: 50%;
-    left: 3%;
- }
+.shoes-homepage-banner-video-textbox .comfort {
+  color: white;
+}
 
- .jewelry-video-banner-homepage-textbox span.unveil-radiance {
-    color: #329BD1;
- }
+.shoes-homepage-banner-video-textbox h3 {
+  font-size: 4rem;
+}
 
- .jewelry-video-banner-homepage-textbox span.jewelry-obsession {
-    color: white;
- }
+/* --------------------------------------- JEWELRY VIDEO BANNER SECTION --------------------------------- */
+.jewelry-video-banner-homepage .container-liquid {
+  position: relative;
+}
 
- .jewelry-video-banner-homepage-textbox h3 {
-    font-size: 4rem;
- }
+.jewelry-video-banner-homepage-textbox {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+}
 
- /* ------------------------------------------ AS FEATURED IN section ------------------------------------ */
- section.as-featured-in div.card {
-    border: none;
- }  
+.jewelry-video-banner-homepage-textbox span.unveil-radiance {
+  color: #329BD1;
+}
+
+.jewelry-video-banner-homepage-textbox span.jewelry-obsession {
+  color: white;
+}
+
+.jewelry-video-banner-homepage-textbox h3 {
+  font-size: 4rem;
+}
+
+/* ------------------------------------------ AS FEATURED IN section ------------------------------------ */
+section.as-featured-in div.card {
+  border: none;
+}
 
 /* ------------------------------------------- NEWSLETTER SECTION ----------------------------------------- */
 section.newsletter {
-    padding: 50px;
+  padding: 50px;
 }
 
 button.newsletter.btn.btn-info {
-    background-color: #329BD1;
-    border-color: #329BD1;
-    color: white;
+  background-color: #329BD1;
+  border-color: #329BD1;
+  color: white;
 }
+
 /* end of Newsletter Section */
 
 /* --------------------------------------------- FOOTER SECTION ------------------------------------------ */
 section.site-footer {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 section.site-footer ul.list-unstyled li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 section.site-footer ul.list-unstyled li a:hover {
-    color:#329BD1;
+  color: #329BD1;
 }
 
 section.site-footer div div div div.card {
-    border: none;
+  border: none;
 }
 
 
 ul.list-unstyled.follow-us li a {
-    color:#329BD1;
-    font-size: 30px;
+  color: #329BD1;
+  font-size: 30px;
 }
 
 .phone-number-footer {
-    position: relative;
-    bottom: 3px;
+  position: relative;
+  bottom: 3px;
 }
+
 /* end of Footer Section */
 
 /* ----------------------------------------- FOOTER BOTTOM SECTION ---------------------------------------- */
 section.footer-bottom {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 a.site-logo-footer-bottom {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 a.site-logo-footer-bottom:hover {
-    color: #329BD1;
+  color: #329BD1;
 }
 
 i#payment-method-footer-bottom {
-    color: white;
-    font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
+
 /* end of Footer Bottom Section */
 
 /* ---------------------------------------- TRACK ORDER PAGE SECTION ------------------------------------- */
 button#track-my-order {
-    background-color: #329BD1;
-    border-color: #329BD1;
-    width: 200px;
+  background-color: #329BD1;
+  border-color: #329BD1;
+  width: 200px;
 }
 
 button#track-my-order-submit {
-    background-color: #329BD1;
-    border-color: #329BD1;
-    width: 200px;
+  background-color: #329BD1;
+  border-color: #329BD1;
+  width: 200px;
 }
+
 /* end of Track Order page */
 
 /* ---------------------------------------- LV BAGS COLLECTION SECTION ----------------------------------- */
 section.lv-bags-collection div.card {
-    border: none;
+  border: none;
 }
 
 .lv-bags-collection-video-banner div.container-liquid {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .lv-bags-collection-video-banner-title h2 {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #fff; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 /* ------------------------------------------ CHANEL BAGS COLLECTION ------------------------------------- */
 .chanel-bags-collection-image-banner .container-liquid {
-    position: relative;
+  position: relative;
 }
 
 .chanel-bags-collection-image-banner-title h2 {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #fff; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 .chanel-bags-collection div.card {
-    border: none;
+  border: none;
 }
 
 /* ---------------------------------------- BAGS MAIN NAV MENU SECTION ------------------------------------ */
 .all-bags-collection .card {
-    border: none;
+  border: none;
 }
 
 .all-bags-collection a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .all-bags-main-nav-banner .container-liquid {
-    position: relative;
+  position: relative;
 }
 
 .all-bags-main-nav-banner-title h2 {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 /* ---------------------------------------JEWELRY MAIN NAV MENU SECTION ---------------------------------- */
 .jewelry-collection-video-banner .container-liquid {
-    position: relative;
+  position: relative;
 }
 
 .jewelry-collection-video-banner-title h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
 
 .jewelry-collection .card {
-    border: none;
+  border: none;
+}
+
+.jewelry-collection a {
+  text-decoration: none;
+  color: black;
 }
 
 /* ---------------------------------------- SHOES MAIN NAV MENU SECTION ---------------------------------- */
@@ -371,7 +381,7 @@ section.lv-bags-collection div.card {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;    
+  color: #fff;
 }
 
 .shoes-collection .card {
@@ -385,7 +395,7 @@ section.lv-bags-collection div.card {
 
 /* ------------------------------------------ PRODUCT PAGE SECTION --------------------------------------- */
 #product-page-cc-icon {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* -------------------------------------------- CART PAGE SECTION ---------------------------------------- */
@@ -398,6 +408,7 @@ section.lv-bags-collection div.card {
     width: 100%;
   }
 }
+
 /* ------------------------------------------ MOBILE RESPONSIVENESS --------------------------------- */
 
 @media only screen and (max-width: 834px) {
@@ -466,21 +477,13 @@ section.lv-bags-collection div.card {
   }
 }
 
-@media only screen and (max-width: 820px) {
-    
-}
+@media only screen and (max-width: 820px) {}
 
-@media only screen and (max-width: 810px) {
-    
-}
+@media only screen and (max-width: 810px) {}
 
-@media only screen and (max-width: 800px) {
-    
-}
+@media only screen and (max-width: 800px) {}
 
-@media only screen and (max-width: 768px) {
-    
-}
+@media only screen and (max-width: 768px) {}
 
 @media only screen and (max-width: 428px) {
 
@@ -564,22 +567,12 @@ section.lv-bags-collection div.card {
   }
 }
 
-@media only screen and (max-width: 414px) {
-    
-}
+@media only screen and (max-width: 414px) {}
 
-@media only screen and (max-width: 390px) {
-    
-}
+@media only screen and (max-width: 390px) {}
 
-@media only screen and (max-width: 375px) {
-    
-}
+@media only screen and (max-width: 375px) {}
 
-@media only screen and (max-width: 360px) {
-    
-}
+@media only screen and (max-width: 360px) {}
 
-@media only screen and (max-width: 320px) {
-    
-}
+@media only screen and (max-width: 320px) {}
