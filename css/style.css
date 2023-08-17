@@ -215,9 +215,9 @@ section.newsletter {
   padding: 50px;
 }
 
-button.newsletter.btn.btn-info {
-  background-color: #329BD1;
-  border-color: #329BD1;
+.newsletter-subscribe {
+  background-color: #329BD1 !important;
+  border-color: #329BD1 !important;
   color: white;
 }
 
