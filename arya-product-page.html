@@ -7,10 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <style>
@@ -283,10 +281,9 @@
             </small>
             <h5 class="h1" id="productTitle">Aeliana</h5>
             <div class="h5" id="productPrice">$600 USD <del class="mx-2">$700</del>
-              <span id="save-badge" class="badge badge-save50 bg-danger">Save
+              <span class="badge badge-save50 bg-danger">Save
                 $100</span>
             </div>
-
 
             <div class="free-shipping-product-form my-3">
               <img src="images/icons/free-shipping-icon.png"> <small>Free Express Shipping<br>
@@ -326,21 +323,21 @@
   <!-- end of Product Page Image Gallery and Form section -->
 
   <script>
-    // Store product information in local storage
+    // Store product information in session storage
     const productInfo = {
       title: "Aeliana",
       price: 600,
       image: "images/lv-bags-collection/aeliana/1.webp"
     };
 
-    localStorage.setItem("productInfo", JSON.stringify(productInfo));
+    sessionStorage.setItem("productInfo", JSON.stringify(productInfo));
   </script>
 
   <script>
     // Function to add product to cart and redirect to cart page
     function addToCart() {
       const quantity = parseInt(document.getElementById("productQuantity").value);
-      const productInfo = JSON.parse(localStorage.getItem("productInfo"));
+      const productInfo = JSON.parse(sessionStorage.getItem("productInfo"));
 
       // Create a cart object
       const cartItem = {
@@ -351,7 +348,7 @@
       };
 
       // Get existing cart items from session storage
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
 
       // Check if the item is already in the cart
       const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
@@ -362,7 +359,7 @@
       }
 
       // Update cart items in session storage
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+      sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
 
       // Redirect to cart page
       window.location.href = "cart-page.html"; // Replace with your actual cart page URL
@@ -400,32 +397,36 @@
           aria-labelledby="description-tab" tabindex="0">
           <div class="mt-5">
             <p>
-              Introducing the exquisite Aeliana Luxury Bag – a true embodiment of elegance and sophistication. Crafted
+              Introducing the exquisite Arya Luxury Handbag – a true embodiment of elegance and sophistication. Crafted
               with the utmost precision and attention to detail, this masterpiece redefines luxury in every sense.</p>
 
-            <p>Enveloped in the gentle embrace of a soothing baby blue hue, the Aeliana Luxury Bag exudes an aura of
+            <p>Enveloped in the gentle embrace of a soothing baby blue hue, the Arya Luxury Handbag exudes an aura of
               timeless charm and refined beauty. The color evokes a sense of tranquility and grace, making it the
-              perfect companion for any occasion, whether it be a casual outing or a glamorous soirée.</p>
+              perfect
+              companion for any occasion, whether it be a casual outing or a glamorous soirée.</p>
 
             <p>Indulge in the opulence of genuine leather as your fingertips graze across the impeccably smooth surface
-              of the Aeliana bag. This carefully selected leather not only enhances the bag's durability but also lends
-              an air of exclusivity, ensuring that your accessory stands the test of time while becoming a symbol of your
+              of
+              the Aeliana bag. This carefully selected leather not only enhances the bag's durability but also lends an
+              air of exclusivity, ensuring that your accessory stands the test of time while becoming a symbol of your
               impeccable taste.</p>
 
-            <p>Designed for both aesthetics and functionality, the Aeliana Luxury Bag features a meticulously crafted
-              strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully from your arm. The
-              strap complements the bag's baby blue exterior, adding an extra layer of refinement to the overall design. It
+            <p>Designed for both aesthetics and functionality, the Arya Luxury Handbag features a meticulously crafted
+              strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully from your arm. The strap
+              complements the bag's baby blue exterior, adding an extra layer of refinement to the overall design. It
               strikes a harmonious balance between comfort and style, allowing you to carry your essentials with
               effortless grace.</p>
 
-            <p>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully designed to
-              accommodate your belongings with ease. Whether it's your daily essentials or treasured possessions, the
-              Aeliana Luxury Bag offers ample room without compromising on its sleek and slim profile.</p>
+            <p>>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully designed to
+              accommodate
+              your belongings with ease. Whether it's your daily essentials or treasured possessions, the Aeliana Luxury
+              Bag offers ample room without compromising on its sleek and slim profile.</p>
 
             <p>Indulge in the allure of Aeliana – where baby blue meets genuine leather, where sophistication meets
               functionality. Elevate your every ensemble and make a statement that echoes through the realms of luxury
-              fashion. With the Aeliana Luxury Bag by your side, you're not just carrying a bag; you're carrying a work
-              of art that mirrors your discerning style and unparalleled elegance.</p>
+              fashion. With the Arya Luxury Handbag by your side, you're not just carrying a bag; you're carrying a work
+              of
+              art that mirrors your discerning style and unparalleled elegance.</p>
           </div>
         </div>
         <div class="tab-pane fade" id="shipping-tab-pane" role="tabpanel" aria-labelledby="shipping-tab" tabindex="0">
@@ -442,15 +443,19 @@
         <div class="tab-pane fade" id="return-tab-pane" role="tabpanel" aria-labelledby="return-tab" tabindex="0">
           <p class="mt-5">We have a pretty straightforward and simple return, refund, and exchange policy.</p>
           <p>When you receive your order and want to exchange it with a different product, it MUST be unopened, unused,
-            in original packaging, and with all the labels. First, you will need to contact us stating your reason for
-            exchange. Then, you will need to ship the original order back to us, at your own expense. Once we receive it, we will inspect
+            in original packaging, and
+            with all the labels. First, you will need to contact us stating your reason for exchange. Then, you
+            will need to ship the original order back to us, at your own expense. Once we receive it, we will inspect
             if it's unopened, unused, in original packaging, and with all the labels. Then, we will issue a store
             credit in the form of a code, and you will use that code to make a new purchase.</p>
           <p>When you receive your order and have changed your mind and you want to return it, it MUST be unopened,
-            unused, in original packaging, and with all the labels. First, you will need to contact us stating your
-            reason for returning the item/s. Then, you will need to ship the original order back to us, at your own expense. Once
-            we receive it, we will inspect if it's unopened, unused, in original packaging, and with all the labels.
-            Then, we will issue a store credit only in the form of a code, not a full refund.</p>
+            unused,
+            in original packaging, and with all the labels. First, you will need to contact us stating your reason for
+            returning the item/s. Then, you will need to ship the original order back to us, at your own expense. Once
+            we
+            receive it, we will inspect if it's unopened, unused, in original packaging, and with all the labels. Then,
+            we
+            will issue a store credit only in the form of a code, not a full refund.</p>
         </div>
         <div class="tab-pane fade" id="guarantee-tab-pane" role="tabpanel" aria-labelledby="guarantee-tab" tabindex="0">
           <p class="mt-5">Our Guarantee of Uncompromising Excellence:</p>
@@ -476,34 +481,38 @@
           data-bs-parent="#accordion-prod-desc-tabs-mobile">
           <div class="accordion-body">
             <div class="mt-5">
-              <p>
-                Introducing the exquisite Aeliana Luxury Bag – a true embodiment of elegance and sophistication. Crafted
-                with the utmost precision and attention to detail, this masterpiece redefines luxury in every sense.</p>
-
-              <p>Enveloped in the gentle embrace of a soothing baby blue hue, the Aeliana Luxury Bag exudes an aura of
-                timeless charm and refined beauty. The color evokes a sense of tranquility and grace, making it the
-                perfect companion for any occasion, whether it be a casual outing or a glamorous soirée.</p>
-
-              <p>Indulge in the opulence of genuine leather as your fingertips graze across the impeccably smooth
-                surface of the Aeliana bag. This carefully selected leather not only enhances the bag's durability but
-                also lends an air of exclusivity, ensuring that your accessory stands the test of time while becoming a
-                symbol of your impeccable taste.</p>
-
-              <p>Designed for both aesthetics and functionality, the Aeliana Luxury Bag features a meticulously crafted
-                strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully from your arm. The
-                strap complements the bag's baby blue exterior, adding an extra layer of refinement to the overall
-                design. It strikes a harmonious balance between comfort and style, allowing you to carry your essentials with
-                effortless grace.</p>
-
-              <p>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully designed to
-                accommodate your belongings with ease. Whether it's your daily essentials or treasured possessions, the
-                Aeliana Luxury Bag offers ample room without compromising on its sleek and slim profile.</p>
-
-              <p>Indulge in the allure of Aeliana – where baby blue meets genuine leather, where sophistication meets
-                functionality. Elevate your every ensemble and make a statement that echoes through the realms of luxury
-                fashion. With the Aeliana Luxury Bag by your side, you're not just carrying a bag; you're carrying a
-                work of art that mirrors your discerning style and unparalleled elegance.</p>
-            </div>
+                <p>
+                  Introducing the exquisite Arya Luxury Handbag – a true embodiment of elegance and sophistication. Crafted
+                  with the utmost precision and attention to detail, this masterpiece redefines luxury in every sense.</p>
+    
+                <p>Enveloped in the gentle embrace of a soothing baby blue hue, the Arya Luxury Handbag exudes an aura of
+                  timeless charm and refined beauty. The color evokes a sense of tranquility and grace, making it the
+                  perfect
+                  companion for any occasion, whether it be a casual outing or a glamorous soirée.</p>
+    
+                <p>Indulge in the opulence of genuine leather as your fingertips graze across the impeccably smooth surface
+                  of
+                  the Aeliana bag. This carefully selected leather not only enhances the bag's durability but also lends an
+                  air of exclusivity, ensuring that your accessory stands the test of time while becoming a symbol of your
+                  impeccable taste.</p>
+    
+                <p>Designed for both aesthetics and functionality, the Arya Luxury Handbag features a meticulously crafted
+                  strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully from your arm. The strap
+                  complements the bag's baby blue exterior, adding an extra layer of refinement to the overall design. It
+                  strikes a harmonious balance between comfort and style, allowing you to carry your essentials with
+                  effortless grace.</p>
+    
+                <p>>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully designed to
+                  accommodate
+                  your belongings with ease. Whether it's your daily essentials or treasured possessions, the Aeliana Luxury
+                  Bag offers ample room without compromising on its sleek and slim profile.</p>
+    
+                <p>Indulge in the allure of Aeliana – where baby blue meets genuine leather, where sophistication meets
+                  functionality. Elevate your every ensemble and make a statement that echoes through the realms of luxury
+                  fashion. With the Arya Luxury Handbag by your side, you're not just carrying a bag; you're carrying a work
+                  of
+                  art that mirrors your discerning style and unparalleled elegance.</p>
+              </div>
           </div>
         </div>
       </div>
@@ -541,16 +550,20 @@
           <div class="accordion-body">
             <p class="mt-3">We have a pretty straightforward and simple return, refund, and exchange policy.</p>
             <p>When you receive your order and want to exchange it with a different product, it MUST be unopened,
-              unused, in original packaging, and with all the labels. First, you will need to contact us stating your reason for exchange. Then, you
+              unused, in original packaging, and
+              with all the labels. First, you will need to contact us stating your reason for exchange. Then, you
               will need to ship the original order back to us, at your own expense. Once we receive it, we will inspect
               if it's unopened, unused, in original packaging, and with all the labels. Then, we will issue a store
               credit in the form of a code, and you will use that code to make a new purchase.
             </p>
             <p>When you receive your order and have changed your mind and you want to return it, it MUST be unopened,
-              unused, in original packaging, and with all the labels. First, you will need to contact us stating your reason for
+              unused,
+              in original packaging, and with all the labels. First, you will need to contact us stating your reason for
               returning the item/s. Then, you will need to ship the original order back to us, at your own expense. Once
-              we receive it, we will inspect if it's unopened, unused, in original packaging, and with all the labels.
-              Then, we will issue a store credit only in the form of a code, not a full refund.
+              we
+              receive it, we will inspect if it's unopened, unused, in original packaging, and with all the labels.
+              Then, we
+              will issue a store credit only in the form of a code, not a full refund.
             </p>
           </div>
         </div>

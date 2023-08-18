@@ -90,7 +90,7 @@
 
   <script>
     // Retrieve cart items from session storage and update cart icon
-    const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     updateCartIconInMenu(cartItems.length);
   </script>
   <!-- end of logo and main navigation section -->

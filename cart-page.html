@@ -198,7 +198,7 @@
 
     <script>
       // Retrieve cart items from session storage and display them in the table
-      const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
       const cartItemsTableBody = document.getElementById("cartItemsTableBody");
 
       cartItems.forEach(item => {
@@ -220,7 +220,7 @@
     <script>
       // Function to calculate and display subtotal
       function updateCartTotals() {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         const subtotalElement = document.createElement("div");
         subtotalElement.className = "subTotalCart";
 
@@ -251,7 +251,7 @@
     <!-- When cart is empty -->
     <script>
       $(document).ready(function () {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         // Check if the cart is empty
         if (cartItems.length === 0) {
@@ -267,13 +267,13 @@
     <script>
       // Function to handle item deletion
       function deleteCartItem(index) {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         // Remove the item at the specified index
         cartItems.splice(index, 1);
 
         // Update session storage
-        sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
         // Refresh the cart page
         location.reload();
@@ -283,7 +283,7 @@
     <script>
       // Update the cart items table
       function updateCartItemsTable() {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         const cartItemsTableBody = document.getElementById("cartItemsTableBody");
 
         cartItemsTableBody.innerHTML = ""; // Clear the existing table content
@@ -314,13 +314,13 @@
     <!-- <script>
       // Function to handle item deletion
       function deleteCartItem(index) {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
         // Remove the item at the specified index
         cartItems.splice(index, 1);
 
         // Update session storage
-        sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
         // Update the cart items table and totals
         updateCartItemsTable();
@@ -329,7 +329,7 @@
 
       // Update the cart items table
       function updateCartItemsTable() {
-        const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         const cartItemsTableBody = document.getElementById("cartItemsTableBody");
 
         cartItemsTableBody.innerHTML = ""; // Clear the existing table content
