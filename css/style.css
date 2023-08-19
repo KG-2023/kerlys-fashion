@@ -42,7 +42,7 @@ li.nav-item a.nav-link:hover {
 
 /* ------------------------------------ HOME PAGE VIDEO BANNER BAG SECTION ------------------------------ */
 
-a.btn.btn-primary {
+.btn-primary {
   background-color: #329BD1;
   border-color: #329BD1;
 }

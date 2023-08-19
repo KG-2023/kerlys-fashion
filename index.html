@@ -77,8 +77,13 @@
             </li>
           </ul>
 
-          <form class="d-flex me-3" role="search">
+          <!-- <form class="d-flex me-3" role="search">
             <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+
+          <form class="d-flex me-3" role="search" onsubmit="searchProducts(); return false;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
             <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
           </form>
 
@@ -470,6 +475,68 @@
     AOS.init();
   </script>
 
+  <script>
+    function searchProducts() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const productInfo = JSON.parse(localStorage.getItem("productInfo"));
+
+      if (
+        productInfo.title.toLowerCase().includes(searchQuery) ||
+        productInfo.description.toLowerCase().includes(searchQuery) // Assuming you have a description property
+      ) {
+        displaySearchResult(productInfo);
+      } else {
+        alert("No matching products found.");
+      }
+    }
+
+    function displaySearchResult(product) {
+      const searchResults = document.getElementById("searchResults");
+      searchResults.innerHTML = `
+      <div class="card" style="border: none;">
+        <img src="${product.image}" class="card-img-top" alt="${product.title}">
+        <div class="card-body text-center">
+          <h5 class="card-title">${product.title}</h5>
+          <p class="card-text">${product.price} USD</p>
+        </div>
+      </div>
+    `;
+
+      // Show the search modal
+      const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
+      searchModal.show();
+    }
+  </script>
+
+  <!-- Tawk.to -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/64e0406794cf5d49dc6b4563/1h85vn5mc';
+      s1.charset = 'UTF-8';
+      s1.setAttribute('crossorigin', '*');
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
 </body>
+
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>
