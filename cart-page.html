@@ -11,22 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
 
-  <script>
-    // JavaScript function to update the cart icon in the navigation menu
-    function updateCartIconInMenu(cartItemCount) {
-      const cartIcon = document.getElementById("navbar-cart-icon");
-      const cartLink = cartIcon.querySelector("a");
-      const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
-
-      if (cartItemCount > 0) {
-        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
-        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
-      } else {
-        cartLink.innerHTML = cartIconHtml;
-      }
-    }
-  </script>
-
 </head>
 
 <style>
@@ -196,166 +180,6 @@
       </div>
     </div>
 
-    <script>
-      // Retrieve cart items from session storage and display them in the table
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-      const cartItemsTableBody = document.getElementById("cartItemsTableBody");
-
-      cartItems.forEach(item => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-      <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
-      <td>${item.title}</td>
-      <td>$${item.price.toFixed()}</td>
-      <td>${item.quantity}</td>
-      <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-    `;
-        cartItemsTableBody.appendChild(row);
-      });
-
-      // Update cart icon in navigation menu with cart item count
-      updateCartIconInMenu(cartItems.length);
-    </script>
-
-    <script>
-      // Function to calculate and display subtotal
-      function updateCartTotals() {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const subtotalElement = document.createElement("div");
-        subtotalElement.className = "subTotalCart";
-
-        let subtotal = 0;
-        cartItems.forEach(item => {
-          subtotal += item.price * item.quantity;
-        });
-
-        subtotalElement.innerHTML = `Subtotal: $${subtotal.toFixed()}`;
-
-        // Clear previous totals
-        const existingSubtotal = document.getElementById("cartSubtotal");
-        if (existingSubtotal) {
-          existingSubtotal.remove();
-        }
-
-        // Add new subtotal to the tfoot element
-        const tfootElement = document.querySelector("tfoot");
-        const tfootRow = tfootElement.querySelector("tr");
-        const tdElement = tfootRow.querySelector("td:last-child");
-        tdElement.appendChild(subtotalElement);
-
-        // Update cart icon in navigation menu with cart item count
-        updateCartIconInMenu(cartItems.length);
-      }
-    </script>
-
-    <!-- When cart is empty -->
-    <script>
-      $(document).ready(function () {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-        // Check if the cart is empty
-        if (cartItems.length === 0) {
-          $('#cart-items-container').hide(); // Hide the table
-          $('#empty-cart-message').show(); // Show the empty cart message
-        } else {
-          $('#cart-items-container').show(); // Show the table
-          $('#empty-cart-message').hide(); // Hide the empty cart message
-        }
-      });
-    </script>
-
-    <script>
-      // Function to handle item deletion
-      function deleteCartItem(index) {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-        // Remove the item at the specified index
-        cartItems.splice(index, 1);
-
-        // Update session storage
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-        // Refresh the cart page
-        location.reload();
-      }
-    </script>
-
-    <script>
-      // Update the cart items table
-      function updateCartItemsTable() {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const cartItemsTableBody = document.getElementById("cartItemsTableBody");
-
-        cartItemsTableBody.innerHTML = ""; // Clear the existing table content
-
-        cartItems.forEach((item, index) => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
-        <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
-        <td>${item.title}</td>
-        <td>$${item.price.toFixed()}</td>
-        <td>${item.quantity}</td>
-        <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-        
-        <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
-
-      `;
-          cartItemsTableBody.appendChild(row);
-        });
-
-        // Update cart totals and icon in navigation menu
-        updateCartTotals();
-      }
-
-      // Call the function to update cart items table
-      updateCartItemsTable();
-    </script>
-
-    <!-- <script>
-      // Function to handle item deletion
-      function deleteCartItem(index) {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-        // Remove the item at the specified index
-        cartItems.splice(index, 1);
-
-        // Update session storage
-        localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-        // Update the cart items table and totals
-        updateCartItemsTable();
-        updateCartTotals();
-      }
-
-      // Update the cart items table
-      function updateCartItemsTable() {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const cartItemsTableBody = document.getElementById("cartItemsTableBody");
-
-        cartItemsTableBody.innerHTML = ""; // Clear the existing table content
-
-        cartItems.forEach((item, index) => {
-          const row = document.createElement("tr");
-          row.innerHTML = `
-        <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
-        <td>${item.title}</td>
-        <td>$${item.price.toFixed()}</td>
-        <td>${item.quantity}</td>
-        <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-        <td><button class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fas fa-trash"></i></button></td>
-      `;
-          cartItemsTableBody.appendChild(row);
-        });
-
-        // Update cart icon in navigation menu
-        updateCartIconInMenu(cartItems.length);
-      }
-
-      // Call the function to update cart items table
-      updateCartItemsTable();
-    </script>
-    </script> -->
-
   </section>
 
   <!-- Site Footer section -->
@@ -444,5 +268,138 @@
     </div>
   </section>
   <!-- end of Footer Bottom Section -->
+
+
+  <!-- JavaScript function to update the cart icon in the navigation menu -->
+  <script>
+    function updateCartIconInMenu(cartItemCount) {
+      const cartIcon = document.getElementById("navbar-cart-icon");
+      const cartLink = cartIcon.querySelector("a");
+      const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
+
+      if (cartItemCount > 0) {
+        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
+        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
+      } else {
+        cartLink.innerHTML = cartIconHtml;
+      }
+    }
+  </script>
+
+  <script>
+    // Retrieve cart items from session storage and display them in the table
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartItemsTableBody = document.getElementById("cartItemsTableBody");
+
+    cartItems.forEach(item => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+    <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+    <td>${item.title}</td>
+    <td>$${item.price.toFixed()}</td>
+    <td>${item.quantity}</td>
+    <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
+  `;
+      cartItemsTableBody.appendChild(row);
+    });
+
+    // Update cart icon in navigation menu with cart item count
+    updateCartIconInMenu(cartItems.length);
+  </script>
+
+  <script>
+    // Function to calculate and display subtotal
+    function updateCartTotals() {
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const subtotalElement = document.createElement("div");
+      subtotalElement.className = "subTotalCart";
+
+      let subtotal = 0;
+      cartItems.forEach(item => {
+        subtotal += item.price * item.quantity;
+      });
+
+      subtotalElement.innerHTML = `Subtotal: $${subtotal.toFixed()}`;
+
+      // Clear previous totals
+      const existingSubtotal = document.getElementById("cartSubtotal");
+      if (existingSubtotal) {
+        existingSubtotal.remove();
+      }
+
+      // Add new subtotal to the tfoot element
+      const tfootElement = document.querySelector("tfoot");
+      const tfootRow = tfootElement.querySelector("tr");
+      const tdElement = tfootRow.querySelector("td:last-child");
+      tdElement.appendChild(subtotalElement);
+
+      // Update cart icon in navigation menu with cart item count
+      updateCartIconInMenu(cartItems.length);
+    }
+  </script>
+
+  <!-- When cart is empty -->
+  <script>
+    $(document).ready(function () {
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      // Check if the cart is empty
+      if (cartItems.length === 0) {
+        $('#cart-items-container').hide(); // Hide the table
+        $('#empty-cart-message').show(); // Show the empty cart message
+      } else {
+        $('#cart-items-container').show(); // Show the table
+        $('#empty-cart-message').hide(); // Hide the empty cart message
+      }
+    });
+  </script>
+
+  <script>
+    // Function to handle item deletion
+    function deleteCartItem(index) {
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+      // Remove the item at the specified index
+      cartItems.splice(index, 1);
+
+      // Update session storage
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+      // Refresh the cart page
+      location.reload();
+    }
+  </script>
+
+  <script>
+    // Update the cart items table
+    function updateCartItemsTable() {
+      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+      const cartItemsTableBody = document.getElementById("cartItemsTableBody");
+
+      cartItemsTableBody.innerHTML = ""; // Clear the existing table content
+
+      cartItems.forEach((item, index) => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+      <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+      <td>${item.title}</td>
+      <td>$${item.price.toFixed()}</td>
+      <td>${item.quantity}</td>
+      <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
+      
+      <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
+
+    `;
+        cartItemsTableBody.appendChild(row);
+      });
+
+      // Update cart totals and icon in navigation menu
+      updateCartTotals();
+    }
+
+    // Call the function to update cart items table
+    updateCartItemsTable();
+  </script>
+
 </body>
 <html>
