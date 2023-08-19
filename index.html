@@ -479,6 +479,18 @@
 
   <!-- SEARCH Script -->
   <script>
+    // Store product information in local storage
+    const productInfo = {
+      title: "Arya",
+      price: 600,
+      image: "images/lv-bags-collection/arya/arya-1.webp",
+      description: "luxury bag for women",
+    };
+
+    localStorage.setItem("productInfo", JSON.stringify(productInfo));
+  </script>
+  
+  <script>
     function searchProducts() {
       const searchQuery = document.getElementById("searchInput").value.toLowerCase();
       const productInfo = JSON.parse(localStorage.getItem("productInfo"));

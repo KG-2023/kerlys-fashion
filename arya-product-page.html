@@ -639,6 +639,55 @@
   </section>
   <!-- end of Footer Bottom Section -->
 
+  <!-- Newsletter scripts -->
+  <script>
+    // Function to handle form submission and localStorage storage
+    function handleSubscribe(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const fullNameInput = document.querySelector('input[placeholder="Enter full name"]');
+      const emailInput = document.querySelector('input[placeholder="Enter email address"]');
+      const successMessage = document.createElement('p');
+      const existingSubscriber = localStorage.getItem('subscriber');
+      const existingSubscriberInfo = JSON.parse(existingSubscriber);
+
+      if (existingSubscriberInfo && existingSubscriberInfo.email === emailInput.value) {
+        // Email is already subscribed
+        successMessage.textContent = 'This email is already subscribed.';
+        successMessage.style.color = 'red';
+      } else if (fullNameInput.value && emailInput.value) {
+        // Store subscriber information in localStorage
+        const subscriberInfo = {
+          fullName: fullNameInput.value,
+          email: emailInput.value,
+        };
+
+        localStorage.setItem('subscriber', JSON.stringify(subscriberInfo));
+
+        // Display success message
+        successMessage.textContent = 'Thank you for subscribing';
+        successMessage.style.color = 'green';
+      } else {
+        // Display error message if inputs are empty
+        successMessage.textContent = 'Please fill out both fields';
+        successMessage.style.color = 'red';
+      }
+
+      // Clear input fields
+      fullNameInput.value = '';
+      emailInput.value = '';
+
+      // Append the message after the form
+      const newsletterSection = document.querySelector('.newsletter');
+      newsletterSection.appendChild(successMessage);
+    }
+
+    // Add event listener to the form submit button
+    const subscribeButton = document.querySelector('.newsletter-subscribe');
+    subscribeButton.addEventListener('click', handleSubscribe);
+
+  </script>
+
   <script>
     // Store product information in local storage
     const productInfo = {
@@ -686,6 +735,29 @@
     // Attach click event to "Add to Cart" button
     const addToCartButton = document.getElementById("addToCartButton");
     addToCartButton.addEventListener("click", addToCart);
+  </script>
+
+  <!-- Script to update cart item count on the main nav cart icon -->
+  <script>
+    // JavaScript function to update the cart icon in the navigation menu
+    function updateCartIconInMenu(cartItemCount) {
+      const cartIcon = document.getElementById("navbar-cart-icon");
+      const cartLink = cartIcon.querySelector("a");
+      const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
+
+      if (cartItemCount > 0) {
+        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
+        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
+      } else {
+        cartLink.innerHTML = cartIconHtml;
+      }
+    }
+  </script>
+
+  <script>
+    // Retrieve cart items from local storage and update cart icon
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    updateCartIconInMenu(cartItems.length);
   </script>
 
 </body>
