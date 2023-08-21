@@ -25,7 +25,7 @@
 
   th,
   td {
-    width: 140px;
+    width: 9rem;
     text-align: center;
     padding: 5px;
   }
@@ -52,8 +52,13 @@
       border-collapse: collapse;
     }
 
+    th,
+    td {
+      width: auto;
+    }
+
     td img {
-      width: 4rem !important;
+      width: 5rem !important;
     }
 
     th.total-heading,
@@ -399,6 +404,19 @@
 
     // Call the function to update cart items table
     updateCartItemsTable();
+  </script>
+
+  <!-- This is to redirect the cart page to checkout page -->
+  <script>    
+    document.addEventListener("DOMContentLoaded", function () {
+      const checkoutButton = document.querySelector(".checkout-button-cart button");
+
+      checkoutButton.addEventListener("click", function () {
+        // Redirect to checkout-page.html
+        window.location.href = "checkout-page.html";
+      });
+    });
+
   </script>
 
 </body>

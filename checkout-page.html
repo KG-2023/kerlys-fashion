@@ -1,373 +1,381 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>KERLYS FASHION - Shop Premium Quality Luxury Bags, Shoes, and Jewellery</title>
-        <link rel="icon" type="image/x-icon" href="images/favicon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/style.css" rel="stylesheet" />
-        <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    </head>
+<head>
+  <title>KERLYS FASHION - Shop Premium Quality Luxury Bags, Shoes, and Jewellery</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <style>
+</head>
 
-      body {
-        font-family: Arial;
-        font-size: 17px;
-        padding: 8px;
-      }
+<style>
+  body {
+    font-family: Arial;
+    font-size: 16px;
+    padding: 8px;
+  }
 
-      button.navbar-toggler {
-        display: none;
-      }
-      
-      * {
-        box-sizing: border-box;
-      }
-      
-      .row {
-        display: -ms-flexbox; 
-        display: flex;
-        -ms-flex-wrap: wrap; 
-        flex-wrap: wrap;
-        margin: 0 -16px;
-      }
-      
-      .col-25 {
-        -ms-flex: 25%;
-        flex: 25%;
-      }
-      
-      .payment-details, .shipping-details {
-        -ms-flex: 50%; 
-        flex: 50%;
-      }
-      
-      .col-75 {
-        -ms-flex: 75%; 
-        flex: 75%;
-      }
-      
-      .col-25,
-      .payment-details,
-      .shipping-details,
-      .col-75 {
-        padding: 0 16px;
-      }
-      
-      .container-checkout-items, .container-checkout-shippingpayment {
-        background-color: #f2f2f2;
-        padding: 5px 20px 15px 20px;
-        border: 1px solid lightgrey;
-        border-radius: 3px;
-      }
-      
-      input[type=text], input[type=number], input[type=date] {
-        width: 100%;
-        margin-bottom: 20px;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-      }
-      
-      label {
-        margin-bottom: 10px;
-        display: block;
-      }
-      
-      .icon-container {
-        margin-bottom: 20px;
-        padding: 7px 0;
-        font-size: 24px;
-      }
-      
-      .btn {
-        background-color: #04AA6D;
-        color: white;
-        padding: 12px;
-        margin: 10px 0;
-        border: none;
-        width: 100%;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 17px;
-      }
-      
-      .btn:hover {
-        background-color: #45a049;
-      }
-      
-      a {
-        color: #2196F3;
-      }
-      
-      hr {
-        border: 1px solid lightgrey;
-      }
-      
-      span.price {
-        float: right;
-        color: grey;
-      }
+  button.navbar-toggler {
+    display: none;
+  }
 
-      div.credit-card-icons-checkout {
-        position: relative;
-        bottom: 5px;
-      }
+  * {
+    box-sizing: border-box;
+  }
 
-      input.btn.btn-complete-payment {
-        background-color: #329BD1;
-      }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: 0 -16px;
+  }
 
-      input.btn.btn-complete-payment:hover {
-        background-color: #329BD1;
-      }
-      
-      /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-      @media (max-width: 800px) {
-        .row {
-          flex-direction: column-reverse;
-        }
-        .col-25 {
-          margin-bottom: 20px;
-        }
-      }
-      </style>
+  .col-25 {
+    -ms-flex: 25%;
+    flex: 25%;
+  }
+
+  .payment-details,
+  .shipping-details {
+    -ms-flex: 50%;
+    flex: 50%;
+  }
+
+  .col-75 {
+    -ms-flex: 75%;
+    flex: 75%;
+  }
+
+  .col-25,
+  .payment-details,
+  .shipping-details,
+  .col-75 {
+    padding: 0 16px;
+  }
+
+  .container-checkout-items,
+  .container-checkout-shippingpayment {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+
+  input[type=text],
+  input[type=number],
+  input[type=date] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+
+  .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+
+  .btn:hover {
+    background-color: #45a049;
+  }
+
+  a {
+    color: #2196F3;
+  }
+
+  hr {
+    border: 1px solid lightgrey;
+  }
+
+  span.price {
+    float: right;
+    color: grey;
+  }
+
+  div.credit-card-icons-checkout {
+    position: relative;
+    bottom: 5px;
+  }
+
+  input.btn.btn-complete-payment {
+    background-color: #329BD1;
+  }
+
+  input.btn.btn-complete-payment:hover {
+    background-color: #329BD1;
+  }
+
+  .product-item {
+    display: flex;
+  }
+  .product-item img {
+    width: 150px;
+  }
+
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+</style>
 
 <body>
-    <!-- header section -->
-    <section class="site-header sticky-top mb-5">
-        <nav class="navbar navbar-expand-lg bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img src="images/website_logo.webp" alt="site-logo" width="150" height="auto">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-menu" aria-controls="navbar-main-menu" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div id="navbar-cart-icon" class="d-flex">
-              <p><a href="cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
-            </div>
-          </div>          
-        </nav>  
-    </section>
-    <!-- end of header section -->
-
-    <!-- Checkout Page Section -->
-    <section class="checkout-page container-sm mb-5">
-      <div class="row">
-        <div class="col-75">
-          <div class="container-checkout-shippingpayment">
-            <form action="https://google.com" method="get" target="_blank">
-            
-              <div class="row">
-                <div class="shipping-details">
-                  <h3>Shipping Address</h3>
-                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                  <input type="text" id="fname" name="firstname" placeholder="Edgar Pateño">
-                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                  <input type="text" id="email" name="email" placeholder="edgar@example.com">
-                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                  <input type="text" id="adr" name="address" placeholder="123 Sample Street">
-                  <label for="city"><i class="fa fa-institution"></i> City</label>
-                  <input type="text" id="city" name="city" placeholder="New York">
-  
-                  <div class="row">
-                    <div class="shipping-details">
-                      <label for="state">State</label>
-                      <input type="text" id="state" name="state" placeholder="NY">
-                    </div>
-                    <div class="shipping-details">
-                      <label for="zip">Zip</label>
-                      <input type="text" id="zip" name="zip" placeholder="10001">
-                    </div>
-                  </div>
-                </div>
-  
-                <div class="payment-details">
-                  <h3>Payment Details</h3>
-                  <p class="mb-2" style="font-size:12px;">All transactions are secure and encrypted.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="payment-method" id="creditcard-payment-method">
-                        <label class="form-check-label me-5" for="creditcard-payment-method">Credit Card</label>
-                      </div>
-                      <div class="credit-card-icons-checkout">
-                        <i class="fa fa-cc-visa" style="color:navy;font-size:20px;"></i>
-                        <i class="fa fa-cc-amex" style="color:blue;font-size:20px;"></i>
-                        <i class="fa fa-cc-mastercard" style="color:red;font-size:20px;"></i>
-                        <i class="fa fa-cc-discover" style="color:orange;font-size:20px;"></i>
-                      </div>
-                  </div>
-  
-                    <label for="name" class="form-check-label">Name on card</label>
-                      <input type="text" id="cname" name="cardname" placeholder="John David">
-                    <label for="cc-number" class="form-check-label">Card Number</label>
-                      <input type="number" class="form-control" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-44444">
-                    <label for="expiry" class="form-check-label">Expiry Date</label>
-                      <input type="date" class="form-control" id="expmonth" name="expmonth" placeholder="02/2030">
-
-                  <div class="row">                    
-                    <div class="payment-details">
-                      <label for="security-code" class="form-check-label">Security Code</label>
-                      <input type="number" class="form-control" id="cvv" name="cvv" placeholder="123">
-                    </div>
-                  </div>
-
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment-method" id="paypal-payment-method">
-                      <label class="form-check-label me-5" for="paypal-payment-method">Paypal</label>
-                    </div>
-                    <div class="paypal-icon-checkout">
-                      <img src="images/icons/PayPal.svg" class="paypal-icon-svg" style="width:80px; height:70px; position: relative; bottom: 8px;">
-                    </div>
-                  </div>
-
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="payment-method" id="afterpay-payment-method">
-                      <label class="form-check-label me-5" for="afterpay-payment-method">Afterpay</label>
-                    </div>
-                    <div class="afterpay-icon-checkout">
-                      <img src="images/icons/afterpay-logo-svg.svg" class="afterpay-icon-svg" style="width:60px; height:30px; position: relative; bottom: 8px;">
-                    </div>
-                  </div>
-                  
-                    <hr>
-                  
-
-                </div>
-                
-              </div>
-              <label>
-                <input type="checkbox" checked="checked" name="sameadr"> Billing address same as shipping
-              </label>
-              <input type="submit" value="Complete Payment" class="btn btn-complete-payment">
-            </form>
-          </div>
-        </div>
-        <div class="col-25">
-          <div class="container-checkout-items">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="p-2">
-                <img src="images/shoes-collection/shoes-1.webp" style="width:50px; height:50px;">
-                <p>Item #1</p>
-              </div>              
-              <div class="p-2 text-end">$600</div>
-            </div>
-  
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="p-2">
-                <img src="images/shoes-collection/shoes-2.webp" style="width:50px; height:50px;">
-                <p>Item #2</p>
-              </div>
-              <div class="p-2 text-end">$600</div>
-            </div>
-  
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="p-2">
-                <img src="images/shoes-collection/shoes-3.webp" style="width:50px; height:50px;">
-                <p>Item #3</p>
-              </div>
-              <div class="p-2 text-end">$600</div>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-sm-between align-items-center">
-              <div class="p-2">Shipping</div>
-              <div class="p-2"></div>
-              <div class="p-2 container-sm text-end">Free</div>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-sm-between align-items-center">
-              <div class="p-2">Total</div>
-              <div class="p-2"></div>
-              <div class="p-2 container-sm text-end">$1,500</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end of Checkout Page -->
-
-    <!-- Site Footer section -->
-    <section class="site-footer pt-5">
+  <!-- header section -->
+  <section class="site-header sticky-top mb-5">
+    <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-              <div class="card bg-transparent h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Customer Help</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="about-us-page.html">About Us</a></li>
-                        <li><a href="contact-us-page.html">Contact Us</a></li>
-                        <li><a href="faq-page.html">FAQs</a></li>
-                        <li><a href="track-order-page.html">Track Your Order</a></li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-transparent h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Corporate Policies</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="shipping-cancellation-page.html">Shipping and Cancellation</a></li>
-                        <li><a href="refund-policy-page.html">Refund Policy</a></li>
-                        <li><a href="return-exchange-page.html">Return and Exchange</a></li>
-                        <li><a href="privacy-policy-page.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service-page.html">Terms of Service</a></li>
-                    </ul>
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-transparent h-100">
-                  <div class="card-body">
-                    <h5 class="card-title">Follow Us On Social Media</h5>
-                    <ul class="list-unstyled follow-us d-flex">
-                        <li class="me-2"><a href="https://facebook.com"><i class="fa fa-facebook-square"></i></a></li>
-                        <li class="me-2"><a href="https://pinterest.com"><i class="fa fa-pinterest-square"></i></a></li>
-                        <li class="me-2"><a href="https://twitter.com"><i class="fa fa-twitter-square"></i></a></li>
-                        <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
-                    </ul>            
-                  </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-transparent h-100">
-                  <div class="card-body">
-                  <h5 class="card-title">Friendly Support</h5>
-                  <p class="card-text">For any questions and concerns, please don't hesitate to contact us below:</p>
-                  <p><i class="fa fa-envelope" style="font-size:16px;color:white;"></i>&nbsp;support@kerlysfashion.com</p>
-                  <p><i class="fa fa-mobile-phone" style="font-size:25px;color:white;"></i>&nbsp;<span class="phone-number-footer">+639123456789</span></p>
-                  </div>
-              </div>
-            </div>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/website_logo.webp" alt="site-logo" width="150" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-menu"
+          aria-controls="navbar-main-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbar-cart-icon" class="d-flex">
+          <p><a href="cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
         </div>
       </div>
+    </nav>
+  </section>
+  <!-- end of header section -->
+
+  <!-- Checkout Page Section -->
+  <section class="checkout-page container mb-5">
+    <div class="row">
+      <div class="col-75">
+        <div class="container-checkout-shippingpayment">
+          <form action="https://google.com" method="get" target="_blank">
+
+            <div class="row">
+              <div class="shipping-details">
+                <h3>Shipping Address</h3>
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Edgar Pateño">
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" placeholder="edgar@example.com">
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input type="text" id="adr" name="address" placeholder="123 Sample Street">
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city" placeholder="New York">
+
+                <div class="row">
+                  <div class="shipping-details">
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="NY">
+                  </div>
+                  <div class="shipping-details">
+                    <label for="zip">Zip</label>
+                    <input type="text" id="zip" name="zip" placeholder="10001">
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-details">
+                <h3>Payment Details</h3>
+                <p class="mb-2" style="font-size:12px;">All transactions are secure and encrypted.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment-method" id="creditcard-payment-method">
+                    <label class="form-check-label me-5" for="creditcard-payment-method">Credit Card</label>
+                  </div>
+                  <div class="credit-card-icons-checkout">
+                    <i class="fa fa-cc-visa" style="color:navy;font-size:20px;"></i>
+                    <i class="fa fa-cc-amex" style="color:blue;font-size:20px;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:red;font-size:20px;"></i>
+                    <i class="fa fa-cc-discover" style="color:orange;font-size:20px;"></i>
+                  </div>
+                </div>
+
+                <label for="name" class="form-check-label">Name on card</label>
+                <input type="text" id="cname" name="cardname" placeholder="John David">
+                <label for="cc-number" class="form-check-label">Card Number</label>
+                <input type="number" class="form-control" id="ccnum" name="cardnumber"
+                  placeholder="1111-2222-3333-44444">
+                <label for="expiry" class="form-check-label">Expiry Date</label>
+                <input type="date" class="form-control" id="expmonth" name="expmonth" placeholder="02/2030">
+
+                <div class="row">
+                  <div class="payment-details">
+                    <label for="security-code" class="form-check-label">Security Code</label>
+                    <input type="number" class="form-control" id="cvv" name="cvv" placeholder="123">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment-method" id="paypal-payment-method">
+                    <label class="form-check-label me-5" for="paypal-payment-method">Paypal</label>
+                  </div>
+                  <div class="paypal-icon-checkout">
+                    <img src="images/icons/PayPal.svg" class="paypal-icon-svg"
+                      style="width:80px; height:70px; position: relative; bottom: 8px;">
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="payment-method" id="afterpay-payment-method">
+                    <label class="form-check-label me-5" for="afterpay-payment-method">Afterpay</label>
+                  </div>
+                  <div class="afterpay-icon-checkout">
+                    <img src="images/icons/afterpay-logo-svg.svg" class="afterpay-icon-svg"
+                      style="width:60px; height:30px; position: relative; bottom: 8px;">
+                  </div>
+                </div>
+
+                <hr>
+
+
+              </div>
+
+            </div>
+            <label>
+              <input type="checkbox" checked="checked" name="sameadr"> Billing address same as shipping
+            </label>
+            <input type="submit" value="Complete Payment" class="btn btn-complete-payment">
+          </form>
+        </div>
+      </div>
+      <div class="col-25">
+        <div class="product-details">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of Checkout Page -->
+
+  <!-- Site Footer section -->
+  <section class="site-footer pt-5">
+    <div class="container-fluid">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card bg-transparent h-100">
+            <div class="card-body">
+              <h5 class="card-title">Customer Help</h5>
+              <ul class="list-unstyled">
+                <li><a href="about-us-page.html">About Us</a></li>
+                <li><a href="contact-us-page.html">Contact Us</a></li>
+                <li><a href="faq-page.html">FAQs</a></li>
+                <li><a href="track-order-page.html">Track Your Order</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-transparent h-100">
+            <div class="card-body">
+              <h5 class="card-title">Corporate Policies</h5>
+              <ul class="list-unstyled">
+                <li><a href="shipping-cancellation-page.html">Shipping and Cancellation</a></li>
+                <li><a href="refund-policy-page.html">Refund Policy</a></li>
+                <li><a href="return-exchange-page.html">Return and Exchange</a></li>
+                <li><a href="privacy-policy-page.html">Privacy Policy</a></li>
+                <li><a href="terms-of-service-page.html">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-transparent h-100">
+            <div class="card-body">
+              <h5 class="card-title">Follow Us On Social Media</h5>
+              <ul class="list-unstyled follow-us d-flex">
+                <li class="me-2"><a href="https://facebook.com"><i class="fa fa-facebook-square"></i></a></li>
+                <li class="me-2"><a href="https://pinterest.com"><i class="fa fa-pinterest-square"></i></a></li>
+                <li class="me-2"><a href="https://twitter.com"><i class="fa fa-twitter-square"></i></a></li>
+                <li><a href="https://instagram.com"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-transparent h-100">
+            <div class="card-body">
+              <h5 class="card-title">Friendly Support</h5>
+              <p class="card-text">For any questions and concerns, please don't hesitate to contact us below:</p>
+              <p><i class="fa fa-envelope" style="font-size:16px;color:white;"></i>&nbsp;support@kerlysfashion.com</p>
+              <p><i class="fa fa-mobile-phone" style="font-size:25px;color:white;"></i>&nbsp;<span
+                  class="phone-number-footer">+639123456789</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- end of Site Footer section -->
 
   <!-- Footer Bottom Section -->
   <section class="footer-bottom pb-5">
-      <div class="container-fluid">
-        <div class="d-flex justify-content-between">
-            <div class="p-3">&#169;2022, <a class="site-logo-footer-bottom" href="index.html">Kerlsy Fashion LTD.</a> &nbsp;ALL RIGHTS RESERVED</div>
-              <div class="p-3">
-                <i class="fa fa-cc-visa" id="payment-method-footer-bottom"></i>
-                <i class="fa fa-cc-amex" id="payment-method-footer-bottom"></i>
-                <i class="fa fa-cc-mastercard" id="payment-method-footer-bottom"></i>
-                <i class="fa fa-cc-discover" id="payment-method-footer-bottom"></i>
-                <i class="fa fa-cc-paypal" id="payment-method-footer-bottom"></i>
-                <i class="fa fa-cc-discover" id="payment-method-footer-bottom"></i>
-              </div>
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between">
+        <div class="p-3">&#169;2022, <a class="site-logo-footer-bottom" href="index.html">Kerlsy Fashion LTD.</a>
+          &nbsp;ALL RIGHTS RESERVED</div>
+        <div class="p-3">
+          <i class="fa fa-cc-visa" id="payment-method-footer-bottom"></i>
+          <i class="fa fa-cc-amex" id="payment-method-footer-bottom"></i>
+          <i class="fa fa-cc-mastercard" id="payment-method-footer-bottom"></i>
+          <i class="fa fa-cc-discover" id="payment-method-footer-bottom"></i>
+          <i class="fa fa-cc-paypal" id="payment-method-footer-bottom"></i>
+          <i class="fa fa-cc-discover" id="payment-method-footer-bottom"></i>
         </div>
       </div>
+    </div>
   </section>
   <!-- end of Footer Bottom Section -->
+
+  <script>
+    // Retrieve cart items from local storage
+    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const productDetailsContainer = document.querySelector(".product-details");
+
+    // Loop through cart items and display details
+    cartItems.forEach(item => {
+      const productDiv = document.createElement("div");
+      productDiv.className = "product-item";
+
+      // Add product title, image, and price
+      productDiv.innerHTML = `
+    <h3>${item.title}</h3>
+    <img src="${item.image}" alt="${item.title}">
+    <p>Price: $${item.price.toFixed(2)}</p>
+  `;
+
+      productDetailsContainer.appendChild(productDiv);
+    });
+
+  </script>
+
 </body>
+
 </html>
