@@ -38,6 +38,7 @@
   .col-25 {
     -ms-flex: 25%;
     flex: 25%;
+    border: 1px solid lightgrey;
   }
 
   .payment-details,
@@ -131,9 +132,12 @@
 
   .product-item {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
+
   .product-item img {
-    width: 150px;
+    width: 100px;
   }
 
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
@@ -365,11 +369,13 @@
       productDiv.className = "product-item";
 
       // Add product title, image, and price
-      productDiv.innerHTML = `
-    <h3>${item.title}</h3>
-    <img src="${item.image}" alt="${item.title}">
-    <p>Price: $${item.price.toFixed(2)}</p>
-  `;
+      productDiv.innerHTML = `    
+        <div>
+          <img src="${item.image}" alt="${item.title}">
+          <h5>${item.title}</h5>
+        </div>
+        <p> $${item.price.toFixed(2)}</p>
+      `;
 
       productDetailsContainer.appendChild(productDiv);
     });
