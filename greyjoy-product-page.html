@@ -26,7 +26,7 @@
     }
 
     /* Hide the images by default */
-    .shae-pp-Slides {
+    .shoes-pp-Slides {
         display: none;
     }
 
@@ -83,12 +83,12 @@
     }
 
     /* Add a transparency effect for thumbnail images */
-    .shae-pp {
+    .shoes-pp {
         opacity: 0.6;
     }
 
     .active,
-    .shae-pp:hover {
+    .shoes-pp:hover {
         opacity: 1;
     }
 
@@ -110,11 +110,11 @@
         --bs-nav-tabs-border-color: #329BD1;
     }
 
-    .shae-product-page .card {
+    .shoes-product-page .card {
         border: none;
     }
 
-    .shae-product-page .g-4 {
+    .shoes-product-page .g-4 {
         --bs-gutter-x: 5rem;
     }
 </style>
@@ -183,22 +183,27 @@
     </section>
     <!-- end of logo and main navigation section -->
 
-    <section class="shae-product-page container-sm">
+    <section class="shoes-product-page container-sm">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
             <div class="col">
                 <div class="card my-5">
                     <div class="container">
-                        <div class="shae-pp-Slides">
-                            <img src="images/jewelry-collection/tiffany-necklace-6.webp" style="width:100%" alt="necklace">
+                        <div class="shoes-pp-Slides">
+                            <img src="images/shoes-collection/greyjoy/2.png" style="width:100%">
                         </div>
 
-                        <div class="shae-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/palomas-graffitilove-pendant-68153360_1006180_SV_1.jpg?&op_usm=1.0,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp" style="width:100%" alt="woman-model">
+                        <div class="shoes-pp-Slides">
+                            <img src="images/shoes-collection/greyjoy/1.png" style="width:100%">
                         </div>
 
-                        <div class="shae-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/palomas-graffitilove-pendant-68153360_1006178_AV_1.jpg?&op_usm=1.0,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp" style="width:100%" alt="necklace">
+                        <div class="shoes-pp-Slides">
+                            <img src="images/shoes-collection/greyjoy/3.png" style="width:100%">
                         </div>
+
+                        <div class="shoes-pp-Slides">
+                            <img src="images/shoes-collection/greyjoy/greyjoy-4.png" style="width:100%">
+                        </div>
+
 
                         <a class="prev" onclick="plusSlides(-1)">❮</a>
                         <a class="next" onclick="plusSlides(1)">❯</a>
@@ -206,16 +211,20 @@
                         <p>&nbsp;</p>
                         <div class="row">
                             <div class="column">
-                                <img class="shae-pp cursor" src="images/jewelry-collection/tiffany-necklace-6.webp"
-                                    style="width:100%" onclick="currentSlide(1)" alt="necklace">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/2.png"
+                                    style="width:100%" onclick="currentSlide(1)" alt="">
                             </div>
                             <div class="column">
-                                <img class="shae-pp cursor" src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/palomas-graffitilove-pendant-68153360_1006180_SV_1.jpg?&op_usm=1.0,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(2)" alt="woman-model">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/1.png"
+                                    style="width:100%" onclick="currentSlide(2)" alt="">
                             </div>
                             <div class="column">
-                                <img class="shae-pp cursor" src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/palomas-graffitilove-pendant-68153360_1006178_AV_1.jpg?&op_usm=1.0,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(3)" alt="necklace">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/3.png"
+                                    style="width:100%" onclick="currentSlide(3)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/greyjoy-4.png"
+                                    style="width:100%" onclick="currentSlide(4)" alt="">
                             </div>
                         </div>
                     </div>
@@ -234,8 +243,8 @@
 
                         function showSlides(n) {
                             let i;
-                            let slides = document.getElementsByClassName("shae-pp-Slides");
-                            let dots = document.getElementsByClassName("shae-pp");
+                            let slides = document.getElementsByClassName("shoes-pp-Slides");
+                            let dots = document.getElementsByClassName("shoes-pp");
                             let captionText = document.getElementById("caption");
                             if (n > slides.length) { slideIndex = 1 }
                             if (n < 1) { slideIndex = slides.length }
@@ -264,8 +273,8 @@
                             <span class="fa fa-star checked"></span>
                             <span>300 Trusted Reviews</span>
                         </small>
-                        <h5 class="h1" id="productTitle">Shae</h5>
-                        <div class="h5" id="productPrice">$800 USD <del class="mx-2">$900</del>
+                        <h5 class="h1" id="productTitle">Greyjoy</h5>
+                        <div class="h5" id="productPrice">$650 USD <del class="mx-2">$750</del>
                             <span class="badge badge-save50 bg-danger">Save
                                 $100</span>
                         </div>
@@ -311,9 +320,9 @@
     <script>
         // Store product information in session storage
         const productInfo = {
-            title: "shae",
-            price: 700,
-            image: "images/jewelry-collection/tiffany-bracelet-3.webp"
+            title: "greyjoy",
+            price: 600,
+            image: "images/shoes-collection/greyjoy/2.png"
         };
 
         sessionStorage.setItem("productInfo", JSON.stringify(productInfo));
