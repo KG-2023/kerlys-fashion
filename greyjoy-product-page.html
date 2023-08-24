@@ -189,19 +189,19 @@
                 <div class="card my-5">
                     <div class="container">
                         <div class="shoes-pp-Slides">
-                            <img src="images/shoes-collection/greyjoy/2.png" style="width:100%">
+                            <img src="images/shoes-collection/greyjoy/1.webp" style="width:100%" alt="greyjoy shoes">
                         </div>
 
                         <div class="shoes-pp-Slides">
-                            <img src="images/shoes-collection/greyjoy/1.png" style="width:100%">
+                            <img src="images/shoes-collection/greyjoy/2.webp" style="width:100%" alt="greyjoy shoes">
                         </div>
 
                         <div class="shoes-pp-Slides">
-                            <img src="images/shoes-collection/greyjoy/3.png" style="width:100%">
+                            <img src="images/shoes-collection/greyjoy/3.webp" style="width:100%" alt="greyjoy shoes">
                         </div>
 
                         <div class="shoes-pp-Slides">
-                            <img src="images/shoes-collection/greyjoy/greyjoy-4.png" style="width:100%">
+                            <img src="images/shoes-collection/greyjoy/4.webp" style="width:100%" alt="greyjoy shoes">
                         </div>
 
 
@@ -211,20 +211,20 @@
                         <p>&nbsp;</p>
                         <div class="row">
                             <div class="column">
-                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/2.png"
-                                    style="width:100%" onclick="currentSlide(1)" alt="">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/1.webp"
+                                    style="width:100%" onclick="currentSlide(1)" alt="greyjoy shoes">
                             </div>
                             <div class="column">
-                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/1.png"
-                                    style="width:100%" onclick="currentSlide(2)" alt="">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/2.webp"
+                                    style="width:100%" onclick="currentSlide(2)" alt="greyjoy shoes">
                             </div>
                             <div class="column">
-                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/3.png"
-                                    style="width:100%" onclick="currentSlide(3)" alt="">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/3.webp"
+                                    style="width:100%" onclick="currentSlide(3)" alt="greyjoy shoes">
                             </div>
                             <div class="column">
-                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/greyjoy-4.png"
-                                    style="width:100%" onclick="currentSlide(4)" alt="">
+                                <img class="shoes-pp cursor" src="images/shoes-collection/greyjoy/4.webp"
+                                    style="width:100%" onclick="currentSlide(4)" alt="greyjoy shoes">
                             </div>
                         </div>
                     </div>
@@ -317,54 +317,6 @@
     </section>
     <!-- end of Product Page Image Gallery and Form section -->
 
-    <script>
-        // Store product information in session storage
-        const productInfo = {
-            title: "greyjoy",
-            price: 600,
-            image: "images/shoes-collection/greyjoy/2.png"
-        };
-
-        sessionStorage.setItem("productInfo", JSON.stringify(productInfo));
-    </script>
-
-    <script>
-        // Function to add product to cart and redirect to cart page
-        function addToCart() {
-            const quantity = parseInt(document.getElementById("productQuantity").value);
-            const productInfo = JSON.parse(sessionStorage.getItem("productInfo"));
-
-            // Create a cart object
-            const cartItem = {
-                title: productInfo.title,
-                price: productInfo.price,
-                image: productInfo.image,
-                quantity: quantity
-            };
-
-            // Get existing cart items from session storage
-            const cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
-
-            // Check if the item is already in the cart
-            const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
-            if (existingItemIndex !== -1) {
-                cartItems[existingItemIndex].quantity += quantity;
-            } else {
-                cartItems.push(cartItem);
-            }
-
-            // Update cart items in session storage
-            sessionStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-            // Redirect to cart page
-            window.location.href = "cart-page.html"; // Replace with your actual cart page URL
-        }
-
-        // Attach click event to "Add to Cart" button
-        const addToCartButton = document.getElementById("addToCartButton");
-        addToCartButton.addEventListener("click", addToCart);
-    </script>
-
     <!-- Product Description tabs -->
     <section class="product-description-tabs-desktop my-5">
         <div class="container-sm">
@@ -392,24 +344,24 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
                     aria-labelledby="description-tab" tabindex="0">
-
-                    <ul class="mt-5">
-                        <li>Unparalleled Comfort: Crafted with premium materials and advanced cushioning technology,
-                            our luxury shoes ensure unmatched comfort throughout the day, whether you're strolling
-                            through the city or attending a glamorous event.</li>
-                        <li>Exceptional Style: Elevate your fashion game with these statement shoes that effortlessly
-                            blend sophistication and modernity, making you the center of attention wherever you go.
-                        </li>
-                        <li>Handcrafted Perfection: Meticulously handcrafted by skilled artisans, each pair of
-                            ExquisiteElegance™ shoes embodies precision and attention to detail, ensuring a unique and
-                            exquisite product.</li>
-                        <li>Superior Durability: Designed to withstand the test of time, these luxury shoes are made
-                            from top-quality materials, promising a long-lasting companion for your high-end wardrobe.
-                        </li>
-                        <li>Timeless Versatility: Perfectly suitable for both formal and casual occasions, our luxury
-                            shoes offer unmatched versatility, making them a must-have addition to your footwear
-                            collection.</li>
-                    </ul>
+                    <div class="mt-5">
+                        <p>The Greyjoy slingback pump is crafted from suede baby goat leather, which is complemented by
+                            an adjustable back strap in Louis Vuitton's emblematic natural leather. The strap bears the
+                            House signature and an engraved, gold-tone stud. The heel, inspired by the round Monogram
+                            Flower, is color-matched to the upper for a particularly refined look.
+                        </p>
+                        <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                            <li>Green</li>
+                            <li>Suede baby goat leather</li>
+                            <li>Strap in natural cowhide leather</li>
+                            <li>Leather outsole</li>
+                            <li>7.5 cm / 3-inch heel</li>
+                            <li>Louis Vuitton signature on the strap</li>
+                            <li>Louis Vuitton-engraved stud</li>
+                            <li>Monogram Flower-shaped heel</li>
+                            <li>Made in Italy</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="shipping-tab-pane" role="tabpanel" aria-labelledby="shipping-tab"
                     tabindex="0">
@@ -473,26 +425,22 @@
                 </h2>
                 <div id="flush-collapse-desc" class="accordion-collapse collapse"
                     data-bs-parent="#accordion-prod-desc-tabs-mobile">
-                    <div class="accordion-body">
-                        <ul class="mt-3">
-                            <li>Unparalleled Comfort: Crafted with premium materials and advanced cushioning technology,
-                                our luxury shoes ensure unmatched comfort throughout the day, whether you're strolling
-                                through the city or attending a glamorous event.</li>
-                            <li>Exceptional Style: Elevate your fashion game with these statement shoes that
-                                effortlessly
-                                blend sophistication and modernity, making you the center of attention wherever you go.
-                            </li>
-                            <li>Handcrafted Perfection: Meticulously handcrafted by skilled artisans, each pair of
-                                ExquisiteElegance™ shoes embodies precision and attention to detail, ensuring a unique
-                                and
-                                exquisite product.</li>
-                            <li>Superior Durability: Designed to withstand the test of time, these luxury shoes are made
-                                from top-quality materials, promising a long-lasting companion for your high-end
-                                wardrobe.</li>
-                            <li>Timeless Versatility: Perfectly suitable for both formal and casual occasions, our
-                                luxury
-                                shoes offer unmatched versatility, making them a must-have addition to your footwear
-                                collection.</li>
+                    <div class="accordion-body mt-3">
+                        <p>The Greyjoy slingback pump is crafted from suede baby goat leather, which is complemented by
+                            an adjustable back strap in Louis Vuitton's emblematic natural leather. The strap bears the
+                            House signature and an engraved, gold-tone stud. The heel, inspired by the round Monogram
+                            Flower, is color-matched to the upper for a particularly refined look.
+                        </p>
+                        <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                            <li>Green</li>
+                            <li>Suede baby goat leather</li>
+                            <li>Strap in natural cowhide leather</li>
+                            <li>Leather outsole</li>
+                            <li>7.5 cm / 3-inch heel</li>
+                            <li>Louis Vuitton signature on the strap</li>
+                            <li>Louis Vuitton-engraved stud</li>
+                            <li>Monogram Flower-shaped heel</li>
+                            <li>Made in Italy</li>
                         </ul>
                     </div>
                 </div>
@@ -507,8 +455,8 @@
                 </h2>
                 <div id="flush-collapse-shipping" class="accordion-collapse collapse"
                     data-bs-parent="#accordion-prod-desc-tabs-mobile">
-                    <div class="accordion-body">
-                        <p class="mt-3">When you place your order, we know that you want to receive the item as fast as
+                    <div class="accordion-body mt-3">
+                        <p>When you place your order, we know that you want to receive the item as fast as
                             possible. We
                             will make that happen.</p>
                         <p>How long will the entire ordering process take from order submission to delivery?</p>
@@ -532,8 +480,8 @@
                 </h2>
                 <div id="flush-collapse-refund" class="accordion-collapse collapse"
                     data-bs-parent="#accordion-prod-desc-tabs-mobile">
-                    <div class="accordion-body">
-                        <p class="mt-3">We have a pretty straightforward and simple return, refund, and exchange policy.
+                    <div class="accordion-body mt-3">
+                        <p>We have a pretty straightforward and simple return, refund, and exchange policy.
                         </p>
                         <p>When you receive your order and want to exchange it with a different product, it MUST be
                             unopened,
@@ -572,8 +520,8 @@
                 </h2>
                 <div id="flush-collapse-guarantee" class="accordion-collapse collapse"
                     data-bs-parent="#accordion-prod-desc-tabs-mobile">
-                    <div class="accordion-body">
-                        <p class="mt-3">Our Guarantee of Uncompromising Excellence:</p>
+                    <div class="accordion-body mt-3">
+                        <p>Our Guarantee of Uncompromising Excellence:</p>
                         <p>At KERLYS FASHION, we take great pride in the craftsmanship and quality of our luxury
                             shoes. We stand firmly behind the excellence of our products and offer a comprehensive
                             guarantee to ensure your absolute satisfaction.
@@ -690,6 +638,55 @@
         </div>
     </section>
     <!-- end of Footer Bottom Section -->
+
+
+    <script>
+        // Store product information in local storage
+        const productInfo = {
+            title: "Greyjoy",
+            price: 600,
+            image: "images/shoes-collection/greyjoy/2.png"
+        };
+
+        localStorage.setItem("productInfo", JSON.stringify(productInfo));
+    </script>
+
+    <script>
+        // Function to add product to cart and redirect to cart page
+        function addToCart() {
+            const quantity = parseInt(document.getElementById("productQuantity").value);
+            const productInfo = JSON.parse(localStorage.getItem("productInfo"));
+
+            // Create a cart object
+            const cartItem = {
+                title: productInfo.title,
+                price: productInfo.price,
+                image: productInfo.image,
+                quantity: quantity
+            };
+
+            // Get existing cart items from local storage
+            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+            // Check if the item is already in the cart
+            const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
+            if (existingItemIndex !== -1) {
+                cartItems[existingItemIndex].quantity += quantity;
+            } else {
+                cartItems.push(cartItem);
+            }
+
+            // Update cart items in local storage
+            localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+            // Redirect to cart page
+            window.location.href = "cart-page.html"; 
+        }
+
+        // Attach click event to "Add to Cart" button
+        const addToCartButton = document.getElementById("addToCartButton");
+        addToCartButton.addEventListener("click", addToCart);
+    </script>
 
 </body>
 
