@@ -414,66 +414,8 @@
   <!-- Newsletter Script -->
   <script src="js/newsletter.js"></script>
 
-  <!-- SEARCH Script -->
-  <script>
-    // Store product information in local storage
-    const productInfo = {
-      title: "Arya",
-      price: 600,
-      image: "images/lv-bags-collection/arya/arya-1.webp",
-      description: "luxury bag for women",
-    };
-
-    localStorage.setItem("productInfo", JSON.stringify(productInfo));
-  </script>
-
-  <script>
-    function searchProducts() {
-      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
-      const productInfo = JSON.parse(localStorage.getItem("productInfo"));
-
-      if (
-        productInfo.title.toLowerCase().includes(searchQuery) ||
-        productInfo.description.toLowerCase().includes(searchQuery) // Assuming you have a description property
-      ) {
-        displaySearchResult(productInfo);
-      } else {
-        alert("No matching products found.");
-      }
-    }
-
-    function displaySearchResult(product) {
-      const searchResults = document.getElementById("searchResults");
-      searchResults.innerHTML = `
-      <div class="card" style="border: none;">
-        <img src="${product.image}" class="card-img-top" alt="${product.title}">
-        <div class="card-body text-center">
-          <h5 class="card-title">${product.title}</h5>
-          <p class="card-text">${product.price} USD</p>
-        </div>
-      </div>
-    `;
-
-      // Show the search modal
-      const searchModal = new bootstrap.Modal(document.getElementById("searchModal"));
-      searchModal.show();
-    }
-  </script>
-
-  <!-- Tawk.to -->
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = 'https://embed.tawk.to/64e0406794cf5d49dc6b4563/1h85vn5mc';
-      s1.charset = 'UTF-8';
-      s1.setAttribute('crossorigin', '*');
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  </script>
-  <!--End of Tawk.to Script-->
+  <!-- Tawk.to Script -->
+  <script src="js/talkto.js"></script>
 
 </body>
 
