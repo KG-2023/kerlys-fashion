@@ -10,21 +10,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
 
-  <script>
-    // JavaScript function to update the cart icon in the navigation menu
-    function updateCartIconInMenu(cartItemCount) {
-      const cartIcon = document.getElementById("navbar-cart-icon");
-      const cartLink = cartIcon.querySelector("a");
-      const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
-
-      if (cartItemCount > 0) {
-        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
-        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
-      } else {
-        cartLink.innerHTML = cartIconHtml;
-      }
-    }
-  </script>
 </head>
 
 <body>
@@ -86,12 +71,6 @@
       </div>
     </nav>
   </section>
-
-  <script>
-    // Retrieve cart items from session storage and update cart icon
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    updateCartIconInMenu(cartItems.length);
-  </script>
   <!-- end of logo and main navigation section -->
 
   <section class="shop-by-brands collection-list py-5">
@@ -173,6 +152,29 @@
     </div>
   </section>
 
+  <!-- Newsletter section -->
+  <section class="newsletter mt-5"
+    style="background-image:url('images/homepage-photos/newsletter-background-image.webp')">
+    <h2 class="text-center">Let's Stay Connected</h2>
+    <p class="text-center">Don't Miss Our Promotion. Sign up to get your 20% discount off your purchase.</p>
+
+    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center" action="" target="_blank"
+      method="get">
+      <div class="row container g-3">
+        <div class="col-sm-4">
+          <input type="text" class="form-control" placeholder="Enter full name" aria-label="City">
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" placeholder="Enter email address" aria-label="State">
+        </div>
+        <div class="col-sm-4">
+          <button type="submit" class="btn btn-primary form-control newsletter-subscribe">Subscribe</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <!-- end of Newsletter section -->
+
   <!-- Site Footer section -->
   <section class="site-footer pt-5">
     <div class="container-fluid">
@@ -250,4 +252,16 @@
     </div>
   </section>
   <!-- end of Footer Bottom Section -->
+
+  <!-- Script to update cart item count on the main nav cart icon -->
+  <script src="js/cartItemCount-mainNav.js"></script>
+
+  <!-- Newsletter Script -->
+  <script src="js/newsletter.js"></script>
+
+  <!-- Tawk.to Script -->
+  <script src="js/talkto.js"></script>
+
 </body>
+
+</html>
