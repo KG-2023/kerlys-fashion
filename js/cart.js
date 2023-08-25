@@ -1,5 +1,4 @@
-// JavaScript function to update the cart icon in the navigation menu
-
+/* Update the cart icon in the navigation menu */
 function updateCartIconInMenu(cartItemCount) {
     const cartIcon = document.getElementById("navbar-cart-icon");
     const cartLink = cartIcon.querySelector("a");
@@ -12,9 +11,10 @@ function updateCartIconInMenu(cartItemCount) {
         cartLink.innerHTML = cartIconHtml;
     }
 }
+/* END - Update the cart icon in the navigation menu */
 
 
-// Adding items to cart and updating the cart items table with subtotal
+/* Add items to cart and update the cart items table with subtotal */
 
 // Retrieve cart items from local storage
 function getCartItems() {
@@ -72,26 +72,29 @@ function updateCartTotals() {
     // Update cart icon in navigation menu with cart item count
     updateCartIconInMenu(cartItems.length);
 }
+/* END - Add items to cart and update the cart items table with subtotal */
 
 
-// When cart is empty 
+/* When cart is empty, hide the table, and show the empty cart message */
 
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
     // Check if the cart is empty
     if (cartItems.length === 0) {
-        $('#cart-items-container').hide(); // Hide the table
-        $('#empty-cart-message').show(); // Show the empty cart message
+        document.getElementById('cart-items-container').style.display = "none"; // Hide the table
+        document.getElementById('empty-cart-message').style.display = "block"; // Show the empty cart message
     } else {
-        $('#cart-items-container').show(); // Show the table
-        $('#empty-cart-message').hide(); // Hide the empty cart message
+        document.getElementById('cart-items-container').style.display = "block"; // Show the table
+        document.getElementById('empty-cart-message').style.display = "none"; // Hide the empty cart message
     }
 });
 
+/* END - When cart is empty, hide the table, and show the empty cart message */
 
 
-// Function to handle item deletion
+
+/* Delete items when trash icon is clicked */
 function deleteCartItem(index) {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -104,8 +107,6 @@ function deleteCartItem(index) {
     // Refresh the cart page
     location.reload();
 }
-
-
 
 // Update the cart items table
 function updateCartItemsTable() {
@@ -136,8 +137,10 @@ function updateCartItemsTable() {
 // Call the function to update cart items table
 updateCartItemsTable();
 
+/* END - Delete items when trash icon is clicked */
 
-// This is to redirect the cart page to checkout page 
+  
+/* This is to redirect the cart page to checkout page */
 
 document.addEventListener("DOMContentLoaded", function () {
     const checkoutButton = document.querySelector(".checkout-button-cart button");
@@ -147,4 +150,5 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "checkout-page.html";
     });
 });
+/* END - This is to redirect the cart page to checkout page */
 
