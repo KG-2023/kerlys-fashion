@@ -137,7 +137,7 @@
   }
 
   .product-item img {
-    width: 100px;
+    width: 80px;
   }
 
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
@@ -358,29 +358,7 @@
   </section>
   <!-- end of Footer Bottom Section -->
 
-  <script>
-    // Retrieve cart items from local storage
-    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const productDetailsContainer = document.querySelector(".product-details");
-
-    // Loop through cart items and display details
-    cartItems.forEach(item => {
-      const productDiv = document.createElement("div");
-      productDiv.className = "product-item";
-
-      // Add product title, image, and price
-      productDiv.innerHTML = `    
-        <div>
-          <img src="${item.image}" alt="${item.title}">
-          <h5>${item.title}</h5>
-        </div>
-        <p> $${item.price.toFixed(2)}</p>
-      `;
-
-      productDetailsContainer.appendChild(productDiv);
-    });
-
-  </script>
+  <script src="js/checkout.js"></script>
 
 </body>
 
