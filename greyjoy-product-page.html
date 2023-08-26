@@ -639,6 +639,7 @@
     </section>
     <!-- end of Footer Bottom Section -->
 
+    <script src="js/newsletter.js"></script>
 
     <script>
         // Store product information in local storage
@@ -650,43 +651,10 @@
 
         localStorage.setItem("productInfo", JSON.stringify(productInfo));
     </script>
+    
+    <script src="js/addToCart.js"></script>
 
-    <script>
-        // Function to add product to cart and redirect to cart page
-        function addToCart() {
-            const quantity = parseInt(document.getElementById("productQuantity").value);
-            const productInfo = JSON.parse(localStorage.getItem("productInfo"));
-
-            // Create a cart object
-            const cartItem = {
-                title: productInfo.title,
-                price: productInfo.price,
-                image: productInfo.image,
-                quantity: quantity
-            };
-
-            // Get existing cart items from local storage
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-            // Check if the item is already in the cart
-            const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
-            if (existingItemIndex !== -1) {
-                cartItems[existingItemIndex].quantity += quantity;
-            } else {
-                cartItems.push(cartItem);
-            }
-
-            // Update cart items in local storage
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-            // Redirect to cart page
-            window.location.href = "cart-page.html"; 
-        }
-
-        // Attach click event to "Add to Cart" button
-        const addToCartButton = document.getElementById("addToCartButton");
-        addToCartButton.addEventListener("click", addToCart);
-    </script>
+    <script src="js/talkto.js"></script>
 
 </body>
 
