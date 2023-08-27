@@ -36,7 +36,7 @@ function renderCartItems() {
         <td>$${item.price.toFixed()}</td>
         <td>${item.quantity}</td>
         <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-      `;
+    `;
         cartItemsTableBody.appendChild(row);
     });
 
@@ -118,13 +118,13 @@ function updateCartItemsTable() {
     cartItems.forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-      <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
-      <td>${item.title}</td>
-      <td>$${item.price.toFixed()}</td>
-      <td>${item.quantity}</td>
+    <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+    <td>${item.title}</td>
+    <td>$${item.price.toFixed()}</td>
+    <td>${item.quantity}</td>
       <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-      
-      <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
+    
+    <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
 
     `;
         cartItemsTableBody.appendChild(row);
@@ -139,7 +139,7 @@ updateCartItemsTable();
 
 /* END - Delete items when trash icon is clicked */
 
-  
+
 /* This is to redirect the cart page to checkout page */
 
 document.addEventListener("DOMContentLoaded", function () {

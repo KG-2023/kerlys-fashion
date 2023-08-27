@@ -33,7 +33,7 @@
     // Attach click event to "Add to Cart" button
     const addToCartButton = document.getElementById("addToCartButton");
     addToCartButton.addEventListener("click", addToCart);
- 
+
 
 
   /* Script to update cart item count on the main nav cart icon */
@@ -55,6 +55,6 @@
     // Retrieve cart items from local storage and update cart icon
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     updateCartIconInMenu(cartItems.length);
- 
+
   /* end of Script to update cart item count on the main nav cart icon */
 

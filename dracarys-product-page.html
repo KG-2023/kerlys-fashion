@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
+
 </head>
 
 <style>
@@ -26,7 +28,7 @@
     }
 
     /* Hide the images by default */
-    .margaery-pp-Slides {
+    .dracarys-pp-Slides {
         display: none;
     }
 
@@ -83,12 +85,12 @@
     }
 
     /* Add a transparency effect for thumbnail images */
-    .margaery-pp {
+    .dracarys-pp {
         opacity: 0.6;
     }
 
     .active,
-    .margaery-pp:hover {
+    .dracarys-pp:hover {
         opacity: 1;
     }
 
@@ -110,11 +112,11 @@
         --bs-nav-tabs-border-color: #329BD1;
     }
 
-    .margaery-product-page .card {
+    .dracarys-product-page .card {
         border: none;
     }
 
-    .margaery-product-page .g-4 {
+    .dracarys-product-page .g-4 {
         --bs-gutter-x: 5rem;
     }
 </style>
@@ -168,10 +170,17 @@
                         </li>
                     </ul>
 
-                    <form class="d-flex me-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <!-- <form class="d-flex me-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+
+                    <form class="d-flex me-3" role="search" onsubmit="searchProducts(); return false;">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                            id="searchInput">
                         <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
                     </form>
+
 
                     <div id="navbar-cart-icon" class="d-flex">
                         <p><a href="cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
@@ -183,34 +192,41 @@
     </section>
     <!-- end of logo and main navigation section -->
 
-    <section class="margaery-product-page container-sm">
+    <section class="dracarys-product-page container-sm">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
             <div class="col">
                 <div class="card my-5">
                     <div class="container">
-                        <div class="margaery-pp-Slides">
-                            <img src="images/jewelry-collection/tiffany-earrings-2.webp" style="width:100%"
-                                alt="earrings">
+                        <div class="dracarys-pp-Slides">
+                            <img src="images/lv-bags-collection/louis-vuitton-onthego-pm.webp" style="width:100%">
                         </div>
 
-                        <div class="margaery-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1028839_SV_1.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                style="width:100%" alt="woman-model">
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM2_Front%20view.png?wid=730&hei=730" style="width:100%">
                         </div>
 
-                        <div class="margaery-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1035418_SV_2.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                style="width:100%" alt="man-model">
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Closeup%20view.png?wid=730&hei=730" style="width:100%">
                         </div>
 
-                        <div class="margaery-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1029459_AV_2.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                style="width:100%" alt="ring">
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Interior%20view.png?wid=730&hei=730" style="width:100%">
                         </div>
 
-                        <div class="margaery-pp-Slides">
-                            <img src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1043665_AV_4_M.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                style="width:100%" alt="ring">
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Interior2%20view.png?wid=730&hei=730" style="width:100%">
+                        </div>
+
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Detail%20view.png?wid=730&hei=730" style="width:100%">
+                        </div>
+
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Back%20view.png?wid=730&hei=730" style="width:100%">
+                        </div>
+
+                        <div class="dracarys-pp-Slides">
+                            <img src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Other%20view.png?wid=730&hei=730" style="width:100%">
                         </div>
 
 
@@ -220,28 +236,36 @@
                         <p>&nbsp;</p>
                         <div class="row">
                             <div class="column">
-                                <img class="margaery-pp cursor" src="images/jewelry-collection/tiffany-earrings-2.webp"
-                                    style="width:100%" onclick="currentSlide(1)" alt="earrings">
+                                <img class="dracarys-pp cursor" src="images/lv-bags-collection/louis-vuitton-onthego-pm.webp"
+                                    style="width:100%" onclick="currentSlide(1)" alt="">
                             </div>
                             <div class="column">
-                                <img class="margaery-pp cursor"
-                                    src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1028839_SV_1.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(2)" alt="woman-model">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-yk-neverfull-mm-monogram-canvas-handbags--M46381_PM1_Worn%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(2)" alt="">
                             </div>
                             <div class="column">
-                                <img class="margaery-pp cursor"
-                                    src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1035418_SV_2.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(3)" alt="man-model">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Closeup%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(3)" alt="">
                             </div>
                             <div class="column">
-                                <img class="margaery-pp cursor"
-                                    src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1029459_AV_2.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(4)" alt="ring">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Interior%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(4)" alt="">
                             </div>
                             <div class="column">
-                                <img class="margaery-pp cursor"
-                                    src="https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-knotdouble-row-ring-69526209_1043665_AV_4_M.jpg?&op_usm=1.75,1.0,6.0&defaultImage=NoImageAvailableInternal&&defaultImage=NoImageAvailableInternal&fmt=webp"
-                                    style="width:100%" onclick="currentSlide(5)" alt="ring">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Interior2%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(5)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Back%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(5)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-onthego-pm-monogram-canvas-handbags--M22976_PM1_Other%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(5)" alt="">
+                            </div>
+                            <div class="column">
+                                <img class="dracarys-pp cursor" src="https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-x-yk-neverfull-mm-monogram-canvas-handbags--M46381_PM1_Cropped%20worn%20view.png?wid=730&hei=730"
+                                    style="width:100%" onclick="currentSlide(5)" alt="">
                             </div>
                         </div>
                     </div>
@@ -260,8 +284,8 @@
 
                         function showSlides(n) {
                             let i;
-                            let slides = document.getElementsByClassName("margaery-pp-Slides");
-                            let dots = document.getElementsByClassName("margaery-pp");
+                            let slides = document.getElementsByClassName("dracarys-pp-Slides");
+                            let dots = document.getElementsByClassName("dracarys-pp");
                             let captionText = document.getElementById("caption");
                             if (n > slides.length) { slideIndex = 1 }
                             if (n < 1) { slideIndex = slides.length }
@@ -290,11 +314,12 @@
                             <span class="fa fa-star checked"></span>
                             <span>300 Trusted Reviews</span>
                         </small>
-                        <h5 class="h1" id="productTitle">Margaery</h5>
-                        <div class="h5" id="productPrice">$700 USD <del class="mx-2">$800</del>
-                            <span class="badge badge-save50 bg-danger">Save
+                        <h5 class="h1" id="productTitle">Dracarys</h5>
+                        <div class="h5" id="productPrice">$800 USD <del class="mx-2">$900</del>
+                            <span id="save-badge" class="badge badge-save50 bg-danger">Save
                                 $100</span>
                         </div>
+
 
                         <div class="free-shipping-product-form my-3">
                             <img src="images/icons/free-shipping-icon.png"> <small>Free Express Shipping<br>
@@ -334,54 +359,6 @@
     </section>
     <!-- end of Product Page Image Gallery and Form section -->
 
-    <script>
-        // Store product information in local storage
-        const productInfo = {
-            title: "Margaery",
-            price: 700,
-            image: "images/jewelry-collection/tiffany-earrings-2.webp"
-        };
-
-        localStorage.setItem("productInfo", JSON.stringify(productInfo));
-    </script>
-
-    <script>
-        // Function to add product to cart and redirect to cart page
-        function addToCart() {
-            const quantity = parseInt(document.getElementById("productQuantity").value);
-            const productInfo = JSON.parse(localStorage.getItem("productInfo"));
-
-            // Create a cart object
-            const cartItem = {
-                title: productInfo.title,
-                price: productInfo.price,
-                image: productInfo.image,
-                quantity: quantity
-            };
-
-            // Get existing cart items from local storage
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-            // Check if the item is already in the cart
-            const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
-            if (existingItemIndex !== -1) {
-                cartItems[existingItemIndex].quantity += quantity;
-            } else {
-                cartItems.push(cartItem);
-            }
-
-            // Update cart items in local storage
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-            // Redirect to cart page
-            window.location.href = "cart-page.html"; // Replace with your actual cart page URL
-        }
-
-        // Attach click event to "Add to Cart" button
-        const addToCartButton = document.getElementById("addToCartButton");
-        addToCartButton.addEventListener("click", addToCart);
-    </script>
-
     <!-- Product Description tabs -->
     <section class="product-description-tabs-desktop my-5">
         <div class="container-sm">
@@ -409,24 +386,52 @@
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description-tab-pane" role="tabpanel"
                     aria-labelledby="description-tab" tabindex="0">
+                    <div class="mt-5">
+                        <p>
+                            Introducing the exquisite dracarys Luxury Bag – a true embodiment of elegance and
+                            sophistication. Crafted
+                            with the utmost precision and attention to detail, this masterpiece redefines luxury in
+                            every sense.</p>
 
-                    <ul class="mt-5">
-                        <li>Unparalleled Comfort: Crafted with premium materials and advanced cushioning technology,
-                            our luxury shoes ensure unmatched comfort throughout the day, whether you're strolling
-                            through the city or attending a glamorous event.</li>
-                        <li>Exceptional Style: Elevate your fashion game with these statement shoes that effortlessly
-                            blend sophistication and modernity, making you the center of attention wherever you go.
-                        </li>
-                        <li>Handcrafted Perfection: Meticulously handcrafted by skilled artisans, each pair of
-                            ExquisiteElegance™ shoes embodies precision and attention to detail, ensuring a unique and
-                            exquisite product.</li>
-                        <li>Superior Durability: Designed to withstand the test of time, these luxury shoes are made
-                            from top-quality materials, promising a long-lasting companion for your high-end wardrobe.
-                        </li>
-                        <li>Timeless Versatility: Perfectly suitable for both formal and casual occasions, our luxury
-                            shoes offer unmatched versatility, making them a must-have addition to your footwear
-                            collection.</li>
-                    </ul>
+                        <p>Enveloped in the gentle embrace of a soothing baby blue hue, the dracarys Luxury Bag exudes an
+                            aura of
+                            timeless charm and refined beauty. The color evokes a sense of tranquility and grace, making
+                            it the
+                            perfect companion for any occasion, whether it be a casual outing or a glamorous soirée.</p>
+
+                        <p>Indulge in the opulence of genuine leather as your fingertips graze across the impeccably
+                            smooth surface
+                            of the dracarys bag. This carefully selected leather not only enhances the bag's durability
+                            but also lends
+                            an air of exclusivity, ensuring that your accessory stands the test of time while becoming a
+                            symbol of
+                            your
+                            impeccable taste.</p>
+
+                        <p>Designed for both aesthetics and functionality, the dracarys Luxury Bag features a
+                            meticulously crafted
+                            strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully from
+                            your arm. The
+                            strap complements the bag's baby blue exterior, adding an extra layer of refinement to the
+                            overall design.
+                            It
+                            strikes a harmonious balance between comfort and style, allowing you to carry your
+                            essentials with
+                            effortless grace.</p>
+
+                        <p>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully designed to
+                            accommodate your belongings with ease. Whether it's your daily essentials or treasured
+                            possessions, the
+                            dracarys Luxury Bag offers ample room without compromising on its sleek and slim profile.</p>
+
+                        <p>Indulge in the allure of dracarys – where baby blue meets genuine leather, where
+                            sophistication meets
+                            functionality. Elevate your every ensemble and make a statement that echoes through the
+                            realms of luxury
+                            fashion. With the dracarys Luxury Bag by your side, you're not just carrying a bag; you're
+                            carrying a work
+                            of art that mirrors your discerning style and unparalleled elegance.</p>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="shipping-tab-pane" role="tabpanel" aria-labelledby="shipping-tab"
                     tabindex="0">
@@ -446,26 +451,24 @@
                     <p class="mt-5">We have a pretty straightforward and simple return, refund, and exchange policy.</p>
                     <p>When you receive your order and want to exchange it with a different product, it MUST be
                         unopened, unused,
-                        in original packaging, and
-                        with all the labels. First, you will need to contact us stating your reason for exchange. Then,
-                        you
-                        will need to ship the original order back to us, at your own expense. Once we receive it, we
-                        will inspect
+                        in original packaging, and with all the labels. First, you will need to contact us stating your
+                        reason for
+                        exchange. Then, you will need to ship the original order back to us, at your own expense. Once
+                        we receive
+                        it, we will inspect
                         if it's unopened, unused, in original packaging, and with all the labels. Then, we will issue a
                         store
                         credit in the form of a code, and you will use that code to make a new purchase.</p>
                     <p>When you receive your order and have changed your mind and you want to return it, it MUST be
                         unopened,
-                        unused,
-                        in original packaging, and with all the labels. First, you will need to contact us stating your
-                        reason for
-                        returning the item/s. Then, you will need to ship the original order back to us, at your own
+                        unused, in original packaging, and with all the labels. First, you will need to contact us
+                        stating your
+                        reason for returning the item/s. Then, you will need to ship the original order back to us, at
+                        your own
                         expense. Once
-                        we
-                        receive it, we will inspect if it's unopened, unused, in original packaging, and with all the
-                        labels. Then,
-                        we
-                        will issue a store credit only in the form of a code, not a full refund.</p>
+                        we receive it, we will inspect if it's unopened, unused, in original packaging, and with all the
+                        labels.
+                        Then, we will issue a store credit only in the form of a code, not a full refund.</p>
                 </div>
                 <div class="tab-pane fade" id="guarantee-tab-pane" role="tabpanel" aria-labelledby="guarantee-tab"
                     tabindex="0">
@@ -491,26 +494,54 @@
                 <div id="flush-collapse-desc" class="accordion-collapse collapse"
                     data-bs-parent="#accordion-prod-desc-tabs-mobile">
                     <div class="accordion-body">
-                        <ul class="mt-3">
-                            <li>Unparalleled Comfort: Crafted with premium materials and advanced cushioning technology,
-                                our luxury shoes ensure unmatched comfort throughout the day, whether you're strolling
-                                through the city or attending a glamorous event.</li>
-                            <li>Exceptional Style: Elevate your fashion game with these statement shoes that
-                                effortlessly
-                                blend sophistication and modernity, making you the center of attention wherever you go.
-                            </li>
-                            <li>Handcrafted Perfection: Meticulously handcrafted by skilled artisans, each pair of
-                                ExquisiteElegance™ shoes embodies precision and attention to detail, ensuring a unique
-                                and
-                                exquisite product.</li>
-                            <li>Superior Durability: Designed to withstand the test of time, these luxury shoes are made
-                                from top-quality materials, promising a long-lasting companion for your high-end
-                                wardrobe.</li>
-                            <li>Timeless Versatility: Perfectly suitable for both formal and casual occasions, our
-                                luxury
-                                shoes offer unmatched versatility, making them a must-have addition to your footwear
-                                collection.</li>
-                        </ul>
+                        <div class="mt-5">
+                            <p>
+                                Introducing the exquisite dracarys Luxury Bag – a true embodiment of elegance and
+                                sophistication. Crafted
+                                with the utmost precision and attention to detail, this masterpiece redefines luxury in
+                                every sense.</p>
+
+                            <p>Enveloped in the gentle embrace of a soothing baby blue hue, the dracarys Luxury Bag
+                                exudes an aura of
+                                timeless charm and refined beauty. The color evokes a sense of tranquility and grace,
+                                making it the
+                                perfect companion for any occasion, whether it be a casual outing or a glamorous soirée.
+                            </p>
+
+                            <p>Indulge in the opulence of genuine leather as your fingertips graze across the impeccably
+                                smooth
+                                surface of the dracarys bag. This carefully selected leather not only enhances the bag's
+                                durability but
+                                also lends an air of exclusivity, ensuring that your accessory stands the test of time
+                                while becoming a
+                                symbol of your impeccable taste.</p>
+
+                            <p>Designed for both aesthetics and functionality, the dracarys Luxury Bag features a
+                                meticulously crafted
+                                strap that elegantly drapes over your shoulder or can be adjusted to hang gracefully
+                                from your arm. The
+                                strap complements the bag's baby blue exterior, adding an extra layer of refinement to
+                                the overall
+                                design. It strikes a harmonious balance between comfort and style, allowing you to carry
+                                your essentials
+                                with
+                                effortless grace.</p>
+
+                            <p>Unveil the interior, and you'll be greeted by a spacious compartment thoughtfully
+                                designed to
+                                accommodate your belongings with ease. Whether it's your daily essentials or treasured
+                                possessions, the
+                                dracarys Luxury Bag offers ample room without compromising on its sleek and slim profile.
+                            </p>
+
+                            <p>Indulge in the allure of dracarys – where baby blue meets genuine leather, where
+                                sophistication meets
+                                functionality. Elevate your every ensemble and make a statement that echoes through the
+                                realms of luxury
+                                fashion. With the dracarys Luxury Bag by your side, you're not just carrying a bag;
+                                you're carrying a
+                                work of art that mirrors your discerning style and unparalleled elegance.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -554,9 +585,9 @@
                         </p>
                         <p>When you receive your order and want to exchange it with a different product, it MUST be
                             unopened,
-                            unused, in original packaging, and
-                            with all the labels. First, you will need to contact us stating your reason for exchange.
-                            Then, you
+                            unused, in original packaging, and with all the labels. First, you will need to contact us
+                            stating your
+                            reason for exchange. Then, you
                             will need to ship the original order back to us, at your own expense. Once we receive it, we
                             will inspect
                             if it's unopened, unused, in original packaging, and with all the labels. Then, we will
@@ -565,16 +596,14 @@
                         </p>
                         <p>When you receive your order and have changed your mind and you want to return it, it MUST be
                             unopened,
-                            unused,
-                            in original packaging, and with all the labels. First, you will need to contact us stating
-                            your reason for
+                            unused, in original packaging, and with all the labels. First, you will need to contact us
+                            stating your
+                            reason for
                             returning the item/s. Then, you will need to ship the original order back to us, at your own
                             expense. Once
-                            we
-                            receive it, we will inspect if it's unopened, unused, in original packaging, and with all
+                            we receive it, we will inspect if it's unopened, unused, in original packaging, and with all
                             the labels.
-                            Then, we
-                            will issue a store credit only in the form of a code, not a full refund.
+                            Then, we will issue a store credit only in the form of a code, not a full refund.
                         </p>
                     </div>
                 </div>
@@ -622,6 +651,7 @@
             </div>
         </form>
     </section>
+
     <!-- end of Newsletter section -->
 
     <!-- Site Footer section -->
@@ -708,58 +738,24 @@
     </section>
     <!-- end of Footer Bottom Section -->
 
+    <script src="js/newsletter.js"></script>
+
+    <!-- Store product information in local storage -->
     <script>
-        // Store product information in local storage
         const productInfo = {
-            title: "Margaery",
-            price: 700,
-            image: "images/jewelry-collection/tiffany-earrings-2.webp"
+            title: "Dracarys",
+            price: 800,
+            image: "images/lv-bags-collection/louis-vuitton-onthego-pm.webp",
+            description: "luxury bag for women"
         };
 
         localStorage.setItem("productInfo", JSON.stringify(productInfo));
     </script>
 
-    <script>
-        // Function to add product to cart and redirect to cart page
-        function addToCart() {
-            const quantity = parseInt(document.getElementById("productQuantity").value);
-            const productInfo = JSON.parse(localStorage.getItem("productInfo"));
+    <script src="js/addToCart.js"></script>
 
-            // Create a cart object
-            const cartItem = {
-                title: productInfo.title,
-                price: productInfo.price,
-                image: productInfo.image,
-                quantity: quantity
-            };
-
-            // Get existing cart items from local storage
-            const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-            // Check if the item is already in the cart
-            const existingItemIndex = cartItems.findIndex(item => item.title === cartItem.title);
-            if (existingItemIndex !== -1) {
-                cartItems[existingItemIndex].quantity += quantity;
-            } else {
-                cartItems.push(cartItem);
-            }
-
-            // Update cart items in local storage
-            localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-            // Redirect to cart page
-            window.location.href = "cart-page.html"; // Replace with your actual cart page URL
-        }
-
-        // Attach click event to "Add to Cart" button
-        const addToCartButton = document.getElementById("addToCartButton");
-        addToCartButton.addEventListener("click", addToCart);
-    </script>
-
+    <script src="js/tawkto.js"></script>
 
 </body>
 
 </html>
-
-
-
