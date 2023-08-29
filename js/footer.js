@@ -3,7 +3,7 @@
 fetch('/footer.html')
     .then(response => response.text())
     .then(data => {
-        // Insert the contents into the main-nav-placeholder element
+        // Insert the contents into the footer element
         document.getElementById('footer').innerHTML = data;
     })
     .catch(error => {
