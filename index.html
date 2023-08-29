@@ -61,11 +61,6 @@
             </li>
           </ul>
 
-          <!-- <form class="d-flex me-3" role="search">
-            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
-
           <form class="d-flex me-3" role="search" onsubmit="searchProducts(); return false;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
             <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
@@ -418,19 +413,5 @@
   <script src="js/tawkto.js"></script>
 
 </body>
-
-<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="searchModalLabel">Search Results</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="searchResults"></div>
-      </div>
-    </div>
-  </div>
-</div>
 
 </html>
