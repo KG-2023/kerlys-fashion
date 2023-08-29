@@ -12,7 +12,7 @@
         quantity: quantity
       };
 
-      // Get existing cart items from session storage
+      // Get existing cart items from local storage
       const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
       // Check if the item is already in the cart
@@ -23,11 +23,11 @@
         cartItems.push(cartItem);
       }
 
-      // Update cart items in session storage
+      // Update cart items in local storage
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
       // Redirect to cart page
-      window.location.href = "cart-page.html"; // Replace with your actual cart page URL
+      window.location.href = "cart-page.html"; 
     }
 
     // Attach click event to "Add to Cart" button
