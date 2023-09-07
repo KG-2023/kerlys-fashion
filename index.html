@@ -32,7 +32,8 @@
     }
 
     .review .card img {
-      border-radius: 5px;;
+      border-radius: 5px;
+      ;
     }
   </style>
 
@@ -40,65 +41,14 @@
 
 <body>
 
-  <!-- announcement banner section -->
   <section class="announcement-bar">
-    <div id="announcement-banner" class="container-fluid">
-      <div class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="3000">
-            <h6>Free Shipping On All Orders</h6>
-          </div>
-
-          <div class="carousel-item" data-bs-interval="3000">
-            <h6>20% OFF On All Items</h6>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="announcement-banner"></div>
   </section>
-  <!-- end of announcement banner section -->
 
   <!-- logo and main navigation section -->
   <section class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/website_logo.webp" alt="site-logo" width="150" height="auto">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-menu"
-          aria-controls="navbar-main-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-main-menu">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-uppercase active" aria-current="page" href="all-bags-menu-main-nav.html">Bags</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="jewelry-collection.html">Jewellery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="shoes-collection.html">Shoes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="our-brands-main-nav.html">Our Brands</a>
-            </li>
-          </ul>
-
-          <form class="d-flex me-3" role="search" onsubmit="searchProducts(); return false;">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-            <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-
-          <div id="navbar-cart-icon" class="d-flex">
-            <p><a href="cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
-          </div>
-
-        </div>
-      </div>
-    </nav>
+    <div id="main-nav"></div>
   </section>
-
   <!-- end of logo and main navigation section -->
 
   <!-- Homepage Video Banner Bag section -->
@@ -271,10 +221,6 @@
     </div>
   </section>
 
-  <section class="reviews">
-    <div id="reviews"></div>
-  </section>
-
   <!-- AS FEATURED IN section -->
   <section class="as-featured-in my-5">
     <h3 class="text-center mb-3 h1">AS FEATURED IN</h3>
@@ -324,7 +270,7 @@
 
   <!-- Newsletter section -->
   <section class="newsletter mt-5"
-    style="background-image:url('images/homepage-photos/newsletter-background-image.webp')">
+    style="background-image:url('../images/homepage-photos/newsletter-background-image.webp')">
     <h2 class="text-center">Let's Stay Connected</h2>
     <p class="text-center">Don't Miss Our Promotion. Sign up to get your 20% discount off your purchase.</p>
 
@@ -350,6 +296,10 @@
     <div id="footer"></div>
   </section>
   <!-- end of Site Footer section -->
+
+  <script src="/js/announcementBanner.js"></script>
+
+  <script src="/js/mainNav.js"></script>
 
   <!-- Cookie Consent banner -->
   <div id="cookieConsent" class="cookie-consent" style="display: none;">

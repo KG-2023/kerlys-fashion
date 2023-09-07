@@ -1,6 +1,6 @@
 
 // Fetch the contents of footer.html
-fetch('/footer.html')
+fetch('/sections/footer.html')
     .then(response => response.text())
     .then(data => {
         // Insert the contents into the footer element
