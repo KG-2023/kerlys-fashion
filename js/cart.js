@@ -1,14 +1,17 @@
 /* Update the cart icon in the navigation menu */
 function updateCartIconInMenu(cartItemCount) {
     const cartIcon = document.getElementById("navbar-cart-icon");
-    const cartLink = cartIcon.querySelector("a");
-    const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
 
-    if (cartItemCount > 0) {
-        const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
-        cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
-    } else {
-        cartLink.innerHTML = cartIconHtml;
+    if (cartIcon) {
+        const cartLink = cartIcon.querySelector("a");
+        const cartIconHtml = '<i class="fa fa-shopping-cart" style="font-size:30px"></i>';
+
+        if (cartItemCount > 0) {
+            const itemCountBadge = `<span class="badge bg-danger">${cartItemCount}</span>`;
+            cartLink.innerHTML = `${cartIconHtml}${itemCountBadge}`;
+        } else {
+            cartLink.innerHTML = cartIconHtml;
+        }
     }
 }
 /* END - Update the cart icon in the navigation menu */
@@ -147,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     checkoutButton.addEventListener("click", function () {
         // Redirect to checkout-page.html
-        window.location.href = "checkout-page.html";
+        window.location.href = "/sections/checkout-page.html";
     });
 });
 /* END - This is to redirect the cart page to checkout page */
