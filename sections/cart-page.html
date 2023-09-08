@@ -3,147 +3,96 @@
 
 <head>
   <title>KERLYS FASHION - Shop Premium Quality Luxury Bags, Shoes, and Jewellery</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 
-<style>
-  table {
-    border-collapse: separate;
-    border-spacing: 20px 0;
-  }
-
-  th {
-    color: black;
-  }
-
-  th,
-  td {
-    width: 9rem;
-    text-align: center;
-    padding: 5px;
-  }
-
-  th.total-heading,
-  td.subtotal-cart-page,
-  td.checkout-button-cart,
-  td.item-price-cart {
-    text-align: right;
-  }
-
-  .subTotalCart {
-    font-weight: bold;
-  }
-
-  #delete-button-cart {
-    background: none;
-    border: none;
-    color: #329BD1;
-  }
-
-  @media only screen and (max-width: 428px) {
+  <style>
     table {
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 20px 0;
+    }
+
+    th {
+      color: black;
     }
 
     th,
     td {
-      width: auto;
-    }
-
-    td img {
-      width: 5rem !important;
+      width: 9rem;
+      text-align: center;
+      padding: 5px;
     }
 
     th.total-heading,
     td.subtotal-cart-page,
+    td.checkout-button-cart,
     td.item-price-cart {
-      text-align: center;
+      text-align: right;
     }
 
-    .subTotalCart,
-    .checkout-button-cart button {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      left: 50%;
-    }
-  }
-
-  @media only screen and (max-width: 320px) {
-    td img {
-      width: 2rem !important;
+    .subTotalCart {
+      font-weight: bold;
     }
 
-    td {
-      padding: 2px;
+    #delete-button-cart {
+      background: none;
+      border: none;
+      color: #329BD1;
     }
-  }
-</style>
+
+    @media only screen and (max-width: 428px) {
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        width: auto;
+      }
+
+      td img {
+        width: 5rem !important;
+      }
+
+      th.total-heading,
+      td.subtotal-cart-page,
+      td.item-price-cart {
+        text-align: center;
+      }
+
+      .subTotalCart,
+      .checkout-button-cart button {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+      }
+    }
+
+    @media only screen and (max-width: 320px) {
+      td img {
+        width: 2rem !important;
+      }
+
+      td {
+        padding: 2px;
+      }
+    }
+  </style>
+
+</head>
 
 <body>
-  <!-- header section -->
-  <!-- announcement banner section -->
+
   <section class="announcement-bar">
-    <div id="announcement-banner" class="container-fluid">
-      <div class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="3000">
-            <h6>Free Shipping On All Orders</h6>
-          </div>
-
-          <div class="carousel-item" data-bs-interval="3000">
-            <h6>20% OFF On All Items</h6>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="announcement-banner"></div>
   </section>
-  <!-- end of announcement banner section -->
 
-  <!-- Main Navigation -->
   <section class="site-header sticky-top">
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/website_logo.webp" alt="site-logo" width="150" height="auto">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-menu"
-          aria-controls="navbar-main-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-main-menu">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-uppercase active" aria-current="page" href="all-bags-menu-main-nav.html">Bags</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="jewelry-collection.html">Jewellery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="shoes-collection.html">Shoes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-uppercase" href="our-brands-main-nav.html">Our Brands</a>
-            </li>
-          </ul>
-
-          <form class="d-flex me-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button id="navbar-search" class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-
-          <div id="navbar-cart-icon" class="d-flex">
-            <p><a href="cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
-          </div>
-
-        </div>
-      </div>
-    </nav>
+    <div id="main-nav"></div>
   </section>
-  <!-- end of header section -->
 
   <!-- Cart Page HTML (cart-page.html) -->
 
@@ -190,14 +139,19 @@
   </section>
   <!-- end of Site Footer section -->
 
+  <script src="/js/announcementBanner.js"></script>
+
+  <script src="/js/mainNav.js"></script>
+
+  <script src="/js/bootstrap.min.js" type="text/javascript" async></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js" type="text/javascript" defer></script>
 
   <!-- Dynamic CART functionality -->
-  <script src="js/cart.js"></script>
+  <script src="/js/cart.js"></script>
 
   <!-- Fetch content of footer.html -->
-  <script src="js/footer.js"></script>
-  
+  <script src="/js/footer.js"></script>
+
 </body>
 <html>
