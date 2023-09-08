@@ -14,8 +14,6 @@ function updateCartIconInMenu(cartItemCount) {
         }
     }
 }
-/* END - Update the cart icon in the navigation menu */
-
 
 /* Add items to cart and update the cart items table with subtotal */
 
@@ -82,14 +80,16 @@ function updateCartTotals() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const emptyCartMessage = document.getElementById('empty-cart-message');
 
     // Check if the cart is empty
     if (cartItems.length === 0) {
-        document.getElementById('cart-items-container').style.display = "none"; // Hide the table
-        document.getElementById('empty-cart-message').style.display = "block"; // Show the empty cart message
+        cartItemsContainer.style.display = "none"; // Hide the table
+        emptyCartMessage.style.display = "block"; // Show the empty cart message
     } else {
-        document.getElementById('cart-items-container').style.display = "block"; // Show the table
-        document.getElementById('empty-cart-message').style.display = "none"; // Hide the empty cart message
+        cartItemsContainer.style.display = "block"; // Show the table
+        emptyCartMessage.style.display = "none"; // Hide the empty cart message
     }
 });
 
@@ -121,15 +121,15 @@ function updateCartItemsTable() {
     cartItems.forEach((item, index) => {
         const row = document.createElement("tr");
         row.innerHTML = `
-    <td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
-    <td>${item.title}</td>
-    <td>$${item.price.toFixed()}</td>
-    <td>${item.quantity}</td>
-      <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
-    
-    <td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
+<td><img src="${item.image}" alt="${item.title}" style="width: 150px;"></td>
+<td>${item.title}</td>
+<td>$${item.price.toFixed()}</td>
+<td>${item.quantity}</td>
+  <td class="item-price-cart">$${(item.price * item.quantity).toFixed()}</td>
 
-    `;
+<td><button id="delete-button-cart" class="btn btn-sm btn-danger" onclick="deleteCartItem(${index})"><i class="fa fa-trash-o"></i></button></td>
+
+`;
         cartItemsTableBody.appendChild(row);
     });
 
@@ -154,4 +154,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 /* END - This is to redirect the cart page to checkout page */
-
