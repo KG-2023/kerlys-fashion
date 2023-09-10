@@ -16,8 +16,6 @@ body>section.newsletter.mt-5>p:nth-child(4) {
 
 /* end of Newsletter Section */
 
-/* --------------------------------------------- FOOTER SECTION ------------------------------------------ */
-
 
 /* ---------------------------------------- TRACK ORDER PAGE SECTION ------------------------------------- */
 button#track-my-order {
@@ -35,27 +33,7 @@ button#track-my-order-submit {
 /* end of Track Order page */
 
 /* ---------------------------------------- LV BAGS COLLECTION SECTION ----------------------------------- */
-section.lv-bags-collection div.card {
-  border: none;
-}
 
-.lv-bags-collection-video-banner div.container-liquid {
-  position: relative;
-  display: inline-block;
-}
-
-.lv-bags-collection-video-banner-title h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
-
-.lv-bags-collection a {
-  text-decoration: none;
-  color: black;
-}
 
 /* ------------------------------------------ CHANEL BAGS COLLECTION ------------------------------------- */
 .chanel-bags-collection-image-banner .container-liquid {
