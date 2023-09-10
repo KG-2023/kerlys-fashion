@@ -1,21 +1,14 @@
-/* ------------------------------------------- NEWSLETTER SECTION ----------------------------------------- */
-section.newsletter {
-  padding: 50px;
+/* global button */
+.btn-primary {
+  background-color: #329BD1;
+  border-color: #329BD1;
 }
 
-.newsletter-subscribe {
-  background-color: #329BD1 !important;
+.btn-primary:hover {
+  background-color: white !important;
   border-color: #329BD1 !important;
-  color: white;
+  color: #329BD1 !important;
 }
-
-body>section.newsletter.mt-5>p:nth-child(4) {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-/* end of Newsletter Section */
-
 
 /* ---------------------------------------- TRACK ORDER PAGE SECTION ------------------------------------- */
 button#track-my-order {
@@ -29,10 +22,6 @@ button#track-my-order-submit {
   border-color: #329BD1;
   width: 200px;
 }
-
-/* end of Track Order page */
-
-/* ---------------------------------------- LV BAGS COLLECTION SECTION ----------------------------------- */
 
 
 /* ------------------------------------------ CHANEL BAGS COLLECTION ------------------------------------- */

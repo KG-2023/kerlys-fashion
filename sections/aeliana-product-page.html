@@ -6,117 +6,10 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/aeliana.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
-<style>
-  * {
-    box-sizing: border-box;
-  }
-
-  img {
-    vertical-align: middle;
-  }
-
-  /* Position the image container (needed to position the left and right arrows) */
-  .container {
-    position: relative;
-  }
-
-  /* Hide the images by default */
-  .aeliana-pp-Slides {
-    display: none;
-  }
-
-  /* Add a pointer when hovering over the thumbnail images */
-  .cursor {
-    cursor: pointer;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 10px;
-    margin-top: -50px;
-    color: white;
-    background-color: #329BD1;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  .prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: none;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  /* Six columns side by side */
-  .column {
-    float: left;
-    width: 19.99%;
-  }
-
-  /* Add a transparency effect for thumbnail images */
-  .aeliana-pp {
-    opacity: 0.6;
-  }
-
-  .active,
-  .aeliana-pp:hover {
-    opacity: 1;
-  }
-
-  div#free-shipping-product-form {
-    width: 350px;
-    border-color: #329BD1;
-  }
-
-  ul.nav.nav-tabs .nav-link {
-    color: black;
-  }
-
-  ul.nav.nav-tabs .nav-link.active {
-    background-color: #329BD1;
-    color: white;
-  }
-
-  .nav-tabs {
-    --bs-nav-tabs-border-color: #329BD1;
-  }
-
-  .aeliana-product-page .card {
-    border: none;
-  }
-
-  .aeliana-product-page .g-4 {
-    --bs-gutter-x: 5rem;
-  }
-</style>
 
 <body>
 
@@ -480,36 +373,14 @@
     </div>
   </section>
 
-  <!-- Newsletter section -->
-  <section class="newsletter mt-5"
-    style="background-image:url('../images/homepage-photos/newsletter-background-image.png')">
-    <h2 class="text-center">Let's Stay Connected</h2>
-    <p class="text-center">Don't Miss Our Promotion. Sign up to get your 20% discount off your purchase.</p>
-
-    <form class="row row-cols-lg-auto g-3 justify-content-center align-items-center" action="https://google.com"
-      target="_blank" method="get">
-      <div class="row container g-3">
-        <div class="col-sm-4">
-          <input type="text" class="form-control" placeholder="Enter full name" aria-label="City">
-        </div>
-        <div class="col-sm-4">
-          <input type="text" class="form-control" placeholder="Enter email address" aria-label="State">
-        </div>
-        <div class="col-sm-4">
-          <button type="submit" class="btn btn-primary form-control newsletter-subscribe">Subscribe</button>
-        </div>
-      </div>
-    </form>
+  <section class="newsletter my-5"
+    style="background-image:url('../images/homepage-photos/newsletter-background-image.webp')">
+    <div id="newsletter"></div>
   </section>
 
-  <!-- end of Newsletter section -->
-
-  <!-- Site Footer section -->
-  <section class="site-footer pt-5">
+  <section class="site-footer">
     <div id="footer"></div>
   </section>
-  <!-- end of Site Footer section -->
-
 
   <script src="/js/announcementBanner.js"></script>
 
