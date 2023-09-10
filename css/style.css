@@ -10,6 +10,11 @@
   color: #329BD1 !important;
 }
 
+/* global stars */
+.fa-star {
+  color: orange;
+}
+
 /* ---------------------------------------- TRACK ORDER PAGE SECTION ------------------------------------- */
 button#track-my-order {
   background-color: #329BD1;
