@@ -38,39 +38,9 @@ button#track-my-order-submit {
 
 
 /* ---------------------------------------- SHOES MAIN NAV MENU SECTION ---------------------------------- */
-.shoes-collection-image-banner .container-liquid {
-  position: relative;
-}
 
-.shoes-collection-image-banner-title h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
-
-.shoes-collection .card {
-  border: none;
-}
-
-.shoes-collection a {
-  text-decoration: none;
-  color: black;
-}
 
 /* ------------------------------------------ PRODUCT PAGE SECTION --------------------------------------- */
 #product-page-cc-icon {
   font-size: 2rem;
-}
-
-/* -------------------------------------------- CART PAGE SECTION ---------------------------------------- */
-
-/* end of Cart Page */
-
-/* -------------------------------------- LARGE SCREEN RESPONSIVENESS -------------------------------- */
-@media only screen and (max-width: 1920px) {
-  .elevate-fashion-image-banner img {
-    width: 100%;
-  }
 }
