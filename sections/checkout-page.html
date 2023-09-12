@@ -7,169 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/checkout.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<style>
-  body {
-    font-family: Arial;
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  button.navbar-toggler {
-    display: none;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  .row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: nowrap;
-    margin: 0 -16px;
-  }
-
-  .col-25 {
-    -ms-flex: 25%;
-    flex: 25%;
-    border: 1px solid lightgrey;
-  }
-
-  .payment-details,
-  .shipping-details {
-    -ms-flex: 50%;
-    flex: 50%;
-  }
-
-  .col-75 {
-    -ms-flex: 75%;
-    flex: 75%;
-  }
-
-  .col-25,
-  .payment-details,
-  .shipping-details,
-  .col-75 {
-    padding: 0 16px;
-  }
-
-  .container-checkout-items,
-  .container-checkout-shippingpayment {
-    background-color: #f2f2f2;
-    padding: 5px 20px 15px 20px;
-    border: 1px solid lightgrey;
-    border-radius: 3px;
-  }
-
-  input[type=text],
-  input[type=number],
-  input[type=date] {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-
-  label {
-    margin-bottom: 10px;
-    display: block;
-  }
-
-  .icon-container {
-    margin-bottom: 20px;
-    padding: 7px 0;
-    font-size: 24px;
-  }
-
-  .btn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    width: 100%;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 17px;
-  }
-
-  .btn:hover {
-    background-color: #45a049;
-  }
-
-  a {
-    color: #2196F3;
-  }
-
-  hr {
-    border: 1px solid lightgrey;
-  }
-
-  span.price {
-    float: right;
-    color: grey;
-  }
-
-  div.credit-card-icons-checkout {
-    position: relative;
-    bottom: 5px;
-  }
-
-  input.btn.btn-complete-payment {
-    background-color: #329BD1;
-  }
-
-  input.btn.btn-complete-payment:hover {
-    background-color: #329BD1;
-  }
-
-  .product-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .product-item img {
-    width: 80px;
-  }
-
-  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-  @media (max-width: 800px) {
-    .row {
-      flex-direction: column-reverse;
-    }
-
-    .col-25 {
-      margin-bottom: 20px;
-    }
-  }
-</style>
-
 <body>
-  <!-- header section -->
   <section class="site-header sticky-top mb-5">
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/index.html">
-          <img src="/images/website_logo.webp" alt="site-logo" width="150" height="auto">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-main-menu"
-          aria-controls="navbar-main-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="navbar-cart-icon" class="d-flex">
-          <p><a href="/sections/cart-page.html"><i class="fa fa-shopping-cart" style="font-size:30px"></i></a></p>
-        </div>
-      </div>
-    </nav>
+    <div id="checkout-header"></div>
   </section>
-  <!-- end of header section -->
 
   <!-- Checkout Page Section -->
   <section class="checkout-page container mb-5">
@@ -283,12 +128,13 @@
   </section>
   <!-- end of Site Footer section -->
 
-  <script src="/js/bootstrap.min.js" type="text/javascript" defer></script>
+  <script src="/js/checkoutHeader.js"></script>
 
   <script src="/js/checkout.js"></script>
 
-  <!-- Fetch content of footer.html -->
   <script src="/js/footer.js"></script>
+
+  <script src="/js/bootstrap.min.js" type="text/javascript" defer></script>
 
 </body>
 
