@@ -30,43 +30,9 @@ button#track-my-order-submit {
 
 
 /* ------------------------------------------ CHANEL BAGS COLLECTION ------------------------------------- */
-.chanel-bags-collection-image-banner .container-liquid {
-  position: relative;
-}
 
-.chanel-bags-collection-image-banner-title h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
-
-.chanel-bags-collection div.card {
-  border: none;
-}
 
 /* ---------------------------------------- BAGS MAIN NAV MENU SECTION ------------------------------------ */
-.all-bags-collection .card {
-  border: none;
-}
-
-.all-bags-collection a {
-  text-decoration: none;
-  color: black;
-}
-
-.all-bags-main-nav-banner .container-liquid {
-  position: relative;
-}
-
-.all-bags-main-nav-banner-title h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-}
 
 /* ---------------------------------------JEWELRY MAIN NAV MENU SECTION ---------------------------------- */
 .jewelry-collection-video-banner .container-liquid {
